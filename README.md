@@ -16,7 +16,7 @@ Requirements
 Documentation
 --
 
-[http://www.yaplex.com/products/atomic-cms/documentation-for-atomic-cms/]
+[View Documentation](http://www.yaplex.com/products/atomic-cms/documentation-for-atomic-cms/)
  
 Screenshots
 ----------
