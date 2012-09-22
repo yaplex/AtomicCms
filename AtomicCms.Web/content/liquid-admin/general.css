@@ -1,0 +1,1426 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	font-family: Arial;
+	font-size: 12px;
+	color: #3a3a3a;
+}
+
+a:link, a:visited, a:active {
+	color: #6b98a8;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	margin: 0;
+	padding: 0 0 15px;
+}
+
+#wrapper {
+	min-width: 1000px;
+	min-height: 100%;
+	background:url(../images/liquid-admin/site/content_bottom.gif) repeat-x left bottom;
+	
+}
+
+
+
+/* start head */
+#head {
+	background: #455560 url(../images/liquid-admin/site/head_bg.gif) repeat-x;
+	width: 100%;
+	min-height: 1px;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+#head:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+} 
+
+#logo_user_details {
+	width: 100%;
+	float: left;
+	height: 127px;
+}
+
+
+#logo {
+	float: left;
+	margin: 0;
+	padding: 13px 0 0 12px;
+	width: 341px;
+	height: 114px;
+	float: left;
+	background:url(../images/liquid-admin/site/logo_bg.gif) no-repeat right top;
+	
+}
+#logo a {
+	display: block;
+	width: 308px;
+	height: 99px;
+	text-indent: -3000px;
+	overflow: hidden;
+	background:url(../images/liquid-admin/site/logo.png) no-repeat;
+}
+#user_details {
+	float: right;
+	width: 190px;
+	background: url(../images/liquid-admin/site/user_details_bg.gif) no-repeat;
+	padding: 15px 0 0 12px;
+	height: 112px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+#user_details_menu {
+	color: #a2bacc;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	float: left;
+}
+#user_details_menu li {
+	margin: 0;
+	padding: 0 0 5px;
+	list-style: none;
+	width: 100%;
+	float: left;
+}
+
+#user_access {
+	margin: 0;
+	padding: 0 0 0 20px;
+	float: left;
+	background:url(../images/liquid-admin/site/user_access.gif) no-repeat left center;
+	font-size: 11px;
+	line-height: 16px;
+}
+#user_access li {
+	float: left;
+	width: auto;
+	padding: 0 5px 0 4px;
+	background:url(../images/liquid-admin/site/user_access_li.gif) no-repeat right center;
+}
+#user_access li.first {
+	padding-left: 0;
+}
+#user_access li.last {
+	background: none;
+}
+
+#user_access a:link,
+#user_access a:visited,
+#user_access a:hover,
+#user_access a:active {
+	color: #78d4fe;
+}
+
+.new_messages:link,
+.new_messages:visited,
+.new_messages:hover,
+.new_messages:active {
+	color: #9ef185;
+	font-weight: bold;
+	padding: 0 0 0 20px;
+	display: block;
+}
+
+#server_details {
+	float: left;
+	margin: 0;
+	padding: 5px 0 0;
+	font-size: 10px;
+	color: #6f818e;
+	width: 100%;
+}
+#server_details dl, #server_details dt, #server_details dd {
+	margin: 0;
+	padding: 0;
+	display: inline;
+} 
+
+#server_details dl {
+	display: block;
+}
+
+
+#menus_wrapper {
+	border-style: solid;
+	border-color: #f3f5f8 #f3f5f8 #267fa8 #f3f5f8;
+	border-width: 1px 0 ;
+	width: 100%;
+	float: left;
+	background: #dee2e6;
+	padding: 8px 0 0;
+	background:#e3e8ea url(../images/liquid-admin/site/menus_wrapper_bg.gif) repeat-x;
+	min-height: 1px;
+	
+}
+
+
+#main_menu {
+	width: 100%;
+	float: left;
+	
+}
+
+#main_menu  ul {
+	margin: 0;
+	padding: 0 11px;
+	float: left;
+}
+
+#main_menu li {
+	float: left;
+	list-style: none;
+	padding: 0 1px 0 0;
+	margin: 0;
+	background:url(../images/liquid-admin/site/main_menu_li.gif) no-repeat right bottom;
+}
+
+#main_menu li.last {
+	background: none;
+	padding: 0;
+}
+
+#main_menu a:link, #main_menu a:visited, #main_menu a:active {
+	display: block;
+	line-height: 33px;
+	float: left;
+	background:url(../images/liquid-admin/site/mm_lk_middle.gif) repeat-x 0 -33px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #fff;
+}
+
+#main_menu span {
+	display: block;
+	float: left;
+	background:url(../images/liquid-admin/site/mm_lk_left.gif) no-repeat 0 -33px;
+}
+
+#main_menu span span {
+	background:url(../images/liquid-admin/site/mm_lk_right.gif) no-repeat right -33px;
+	padding: 0 13px;
+}
+
+#main_menu a:hover {
+	background-position: 0 -66px;
+}
+
+#main_menu a:hover span {
+	background-position: 0 -66px;
+	cursor: pointer;
+}
+
+#main_menu a:hover span span {
+	background-position: right -66px;
+}
+
+#main_menu a.selected:link,
+#main_menu a.selected:visited,
+#main_menu a.selected:hover,
+#main_menu a.selected:active {
+	text-decoration: none;
+	color: #223138;
+	background-position: 0 0;
+}
+
+#main_menu a.selected:link span,
+#main_menu a.selected:visited span,
+#main_menu a.selected:hover span,
+#main_menu a.selected:active span {
+	background-position: 0 0;
+	cursor: default;
+}
+
+#main_menu a.selected:link span span,
+#main_menu a.selected:visited span span,
+#main_menu a.selected:hover span span,
+#main_menu a.selected:active span span {
+	background-position: right 0;
+}
+
+
+
+.sec_menu {
+	background: #319ecf url(../images/liquid-admin/site/sec_menu_bg.gif) repeat-x;
+	width: 100%;
+	float: left;
+}
+
+.sec_menu  ul {
+	margin: 0;
+	padding: 0 0 0 23px;
+	float: left;
+}
+
+.sec_menu li {
+	float: left;
+	list-style: none;
+	margin: 0 19px 0 0;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.sec_menu li ul {
+	position: absolute;
+	top: 41px;
+	right: -3px;
+	background: #319ecf;
+	margin: 0;
+	padding: 0;
+	border-color: #267fa8;
+	border-width: 1px 4px 1px 1px;
+	border-style: solid;
+	padding: 8px;
+	float: left;
+	width: 120px;
+	display: none;
+	
+}
+
+.sec_menu li:hover ul {
+	display: block;
+}
+
+.sec_menu ul ul li {
+	margin: 0;
+	padding: 0;
+	float: right;
+	clear: right;
+	
+	
+	
+}
+
+.sec_menu ul ul a:link,
+.sec_menu ul ul a:visited,
+.sec_menu ul ul a:hover,
+.sec_menu ul ul a:active {
+	line-height: 28px;
+	display: block;
+	float: right;
+	white-space: nowrap;
+	
+	background-position: 0 5px;
+	
+}
+
+.sec_menu a {
+	display: block;
+	float: left;
+	white-space: nowrap;
+	line-height: 41px;
+	color: #fff;
+	padding: 0 0 0 19px;
+	background-position: 0 12px;
+	background-repeat: no-repeat;
+}
+
+.sm1 {
+	background-image:url(../images/liquid-admin/site/sm_lk1.gif);
+}
+
+.sm2 {
+	background-image:url(../images/liquid-admin/site/sm_lk2.gif);
+}
+
+.sm3 {
+	background-image:url(../images/liquid-admin/site/sm_lk3.gif);
+}
+
+.sm4 {
+	background-image:url(../images/liquid-admin/site/sm_lk4.gif);
+}
+
+.sm5 {
+	background-image:url(../images/liquid-admin/site/sm_lk5.gif);
+}
+
+.sm6 {
+	background-image:url(../images/liquid-admin/site/sm_lk6.gif);
+}
+
+.sm7 {
+	background-image:url(../images/liquid-admin/site/sm_lk7.gif);
+}
+
+.sm8 {
+	background-image:url(../images/liquid-admin/site/sm_lk8.gif);
+}
+
+.drop {
+	display: block;
+	float: left;
+	background:url(../images/liquid-admin/site/more_right.gif) no-repeat -1000px;
+	padding-right: 10px;
+	
+}
+
+.drop span {
+	display: block;
+	background:url(../images/liquid-admin/site/more_left.gif) no-repeat -1000px;
+	float: left;
+	padding-left: 11px;
+}
+
+.drop span span {
+	display: block;
+	
+	background:url(../images/liquid-admin/site/drop.gif) no-repeat -1000px;
+	padding-right: 11px;
+	padding-left: 0;
+}
+
+.sec_menu li:hover .drop {
+	background-position: right center;
+}
+
+.sec_menu li:hover .drop span {
+	background-position:  0 0;
+}
+
+.sec_menu li:hover .drop span span {
+	background-position: right 12px;
+}
+
+
+
+
+
+
+#search_wrapper {
+	float: left;
+	clear: both;
+}
+
+#search_wrapper {
+	position: absolute;
+	top: 117px;
+	left: -4px;
+	width: 177px;
+	height: 43px;
+	background:url(../images/liquid-admin/site/search_bg.gif) no-repeat;
+	float: left;
+	padding: 7px 12px 0 10px;
+	
+	
+}
+
+#search_wrapper form, #search_wrapper fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#search_wrapper form {
+	background:url(../images/liquid-admin/site/search_form.gif) no-repeat;
+	padding: 3px 3px 0 6px;
+	height: 21px;
+}
+
+#search_wrapper fieldset {
+	width: 100%;
+	overflow: hidden;	
+}
+
+#search_wrapper label {
+	float: left;
+	background:url(../images/liquid-admin/site/search_label.gif) no-repeat left center;
+	padding: 2px 0 2px 15px;
+	
+	width: 120px;
+}
+
+#search_wrapper input.text {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	width: 100%;
+	
+	font-size: 11px;
+}
+
+#search_wrapper .go {
+	float: right;
+}
+
+
+
+#search_wrapper .go {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+#search_wrapper .go input {
+	width: 1000px;
+	height: 1000px;
+	position: absolute;
+	top: -100px;
+	left: -100px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	cursor: pointer;
+}
+
+#search_wrapper .go {
+	width: 23px;
+	height: 18px;
+	background:url(../images/liquid-admin/site/go.gif) no-repeat;
+	float: right;
+}
+
+#search_wrapper_menu {
+	margin: 0;
+	padding: 2px 0 0;
+}
+
+#search_wrapper_menu li {
+	float: left;
+	font-size: 10px;
+	margin: 0;
+	padding: 0 8px 0 7px;
+	list-style: none;
+	background:url(../images/liquid-admin/site/search_wrapper_li.gif) no-repeat right center;
+}
+
+#search_wrapper_menu li.first {
+	padding-left: 0;
+}
+
+#search_wrapper_menu li.last {
+	background: none;
+}
+
+
+
+
+/* end head */
+
+
+/* start content */
+#content {
+	width: 100%;
+	min-height: 1px;
+	padding: 23px 0 47px;
+	background:url(../images/liquid-admin/site/content_top.gif) repeat-x; 
+		
+}
+
+#content:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+} 
+
+
+
+/* start page */
+
+#page {
+	float: right;
+	margin-left: -263px;
+	width: 100%;
+}
+
+#page .inner {
+	margin-left: 263px;
+	padding: 0 11px 0 0;
+	
+}
+
+.title_wrapper_left {
+	display: block;
+	width: 10px;
+	height: 35px;
+	overflow: hidden;
+	background:url(../images/liquid-admin/site/title_wrapper_left.png);
+	position: absolute;
+	top: 0;
+	left: -10px;
+}
+
+.title_wrapper_right {
+	
+	display: block;
+	width: 10px;
+	height: 35px;
+	overflow: hidden;
+	background:url(../images/liquid-admin/site/title_wrapper_right.png);
+	position: absolute;
+	top: 0;
+	right: -10px;
+}
+
+.title_wrapper {
+	background:#6997a7 url(../images/liquid-admin/site/title_wrapper_middle.png) repeat-x;
+	padding: 0 5px;
+	margin: 0 10px;
+	position: relative;
+	top: 0;
+	left: 0;
+	color: #fff;
+	min-height: 1px;
+}
+
+.title_wrapper:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+} 
+
+.title_wrapper h2 {
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 35px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	white-space: nowrap;
+}
+
+.section {
+	padding: 0 0 17px;
+}
+
+.section_menu {
+	float: right;
+	margin: 0;
+	padding: 5px 0 0;
+}
+
+.section_menu  li {
+	float: left;
+	list-style: none;
+	padding: 0 0 0 5px;
+}
+
+.section_menu a:link,
+.section_menu a:visited,
+.section_menu a:hover,
+.section_menu a:active
+
+ {
+	display: block;
+	line-height: 30px;
+	background:url(../images/liquid-admin/site/middle_tab.png) repeat-x;
+	white-space: nowrap;
+	float: left;
+	font-size: 14px;
+	color: #5c757e;
+}
+
+.section_menu a span {
+	display: block;
+	background:url(../images/liquid-admin/site/left_tab.png) no-repeat;
+}
+
+.section_menu a span span {
+	display: block;
+	background:url(../images/liquid-admin/site/right_tab.png) no-repeat right top;
+	padding: 0 15px;
+}
+
+.section_menu a:hover {
+	background-position: 0 -60px;
+	text-decoration: none;
+	color: #4e9cb8;
+}
+
+.section_menu a:hover  span {
+	background-position: 0 -60px;
+}
+
+.section_menu a:hover  span span {
+	background-position: right -60px;
+	
+}
+
+.section_menu a.active:link,
+.section_menu a.active:visited,
+.section_menu a.active:hover,
+.section_menu a.active:active
+ {
+	background-position: 0 -30px;
+	color: #333e42;
+}
+
+.section_menu a.active:link span,
+.section_menu a.active:visited span,
+.section_menu a.active:hover span,
+.section_menu a.active:active span {
+	background-position: 0 -30px;
+}
+
+.section_menu a.active:link span span,
+.section_menu a.active:visited span span,
+.section_menu a.active:hover span span,
+.section_menu a.active:active span span
+ {
+	background-position: right -30px;
+}
+
+
+
+.scb {
+	height: 10px;
+	margin: 0 10px;
+	background: #e7f3f8 url(../images/liquid-admin/site/scb.png) repeat-x;
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	min-height: 1px;
+}
+
+.scb_left {
+	width: 10px;
+	height: 10px;
+	display: block;
+	overflow: hidden;
+	background:url(../images/liquid-admin/site/scb_left.png);
+	position: absolute;
+	top: 0;
+	left: -10px;
+}
+
+.scb_right {
+	width: 10px;
+	height: 10px;
+	display: block;
+	overflow: hidden;
+	background:url(../images/liquid-admin/site/scb_right.png);
+	position: absolute;
+	top: 0;
+	right: -10px;
+}
+
+
+.sct {
+	background: #e7f3f8;
+}
+.sct_left {
+	background: url(../images/liquid-admin/site/sct_left_right.gif) repeat-y;
+}
+
+.sct_right {
+	background:  url(../images/liquid-admin/site/sct_left_right.gif) repeat-y right top;
+}
+
+.sct_left .sct_left {
+	background:url(../images/liquid-admin/site/sct_left.gif) no-repeat;
+}
+
+.sct_left .sct_left .sct_right {
+	background:url(../images/liquid-admin/site/sct_right.gif) no-repeat right top;
+	min-height: 30px;
+	padding: 15px 15px 5px;
+	
+}
+
+
+
+
+
+/* end page */
+
+/* start sidebar */
+#sidebar {
+	width: 246px;
+	float: left;
+}
+
+#sidebar .inner {
+	padding: 0 0 0 11px;
+}
+
+#sidebar .sct {
+	background: #cbe2ed;
+	
+}
+
+#sidebar .sct_left, #sidebar .sct_right {
+	background-image: url(../images/liquid-admin/site/sct_left_right2.gif);
+}
+
+#sidebar .sct_left .sct_left {
+	background-image: url(../images/liquid-admin/site/sct_left2.gif);
+}
+
+#sidebar .sct_left .sct_left .sct_right {
+	background-image: url(../images/liquid-admin/site/sct_right2.gif);
+}
+
+
+#sidebar .title_wrapper_left {
+	background-image: url(../images/liquid-admin/site/title_wrapper_left2.png);
+}
+
+#sidebar .title_wrapper_right {
+	background-image: url(../images/liquid-admin/site/title_wrapper_right2.png);
+}
+
+#sidebar .scb_left {
+	background-image: url(../images/liquid-admin/site/scb_left2.png);
+}
+
+
+#sidebar .scb_right {
+	background-image: url(../images/liquid-admin/site/scb_right2.png);
+}
+
+
+#sidebar .scb {
+	background-image: url(../images/liquid-admin/site/scb2.png);
+	background-color: #cbe2ed;
+}
+
+
+
+
+#sidebar .sct_left .sct_left .sct_right {
+	padding: 0 2px 0;
+}
+
+.sidebar_menu {
+	margin: 0;
+	padding: 5px 0 0;
+	width: 100%;
+	overflow: hidden;
+	
+	
+}
+
+.sidebar_menu li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	float: left;
+	background: url(../images/liquid-admin/site/sidebar_menu_bg.gif) no-repeat left bottom;
+}
+
+.sidebar_menu li.last {
+	background: none;
+}
+
+.sidebar_menu a:link, 
+.sidebar_menu a:visited, 
+.sidebar_menu a:hover, 
+.sidebar_menu a:active {
+	color: #194d65;
+	display: block;
+	line-height: 23px;
+	padding: 0 0 6px 22px;
+	background:url(../images/liquid-admin/site/sidebar_lk_bg.gif) no-repeat 13px 8px;
+}
+
+
+.todo_list {
+	margin: 0;
+	padding: 0;
+}
+
+.todo_list li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.todo_list dl, .todo_list dt, .todo_list dd {
+	margin: 0;
+	padding: 0;
+}
+
+.todo_list dl {
+	padding: 6px 14px 11px 33px;
+	background:url(../images/liquid-admin/site/sidebar_menu_bg.gif) no-repeat left bottom;
+	zoom: 1;
+}
+
+.todo_list dl.last {
+	background: none;
+	padding-bottom: 0;
+}
+
+.todo_list dt {
+	color: #194d65;
+	font-weight: bold;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.order {
+	display: block;
+	width: 18px;
+	height: 17px;
+	
+	line-height: 16px;
+	text-align: center;
+	text-indent: 1px;
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #fff;
+	background:url(../images/liquid-admin/site/order.gif) no-repeat;
+	font-weight: normal;
+	position: absolute;
+	top: -1px;
+	
+	left: -22px;
+}
+
+.todo_list dd {
+	font-size: 10px;
+	color: #586368;
+	padding: 3px 0 0;
+}
+
+.todo_menu {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.todo_menu li {
+	float: left;
+	padding: 0 10px 0 0;
+}
+
+.todo_menu a:link,
+.todo_menu a:visited,
+.todo_menu a:hover,
+.todo_menu a:active {
+	color: #3386ac;
+	display: block;
+	float: left;
+	background:url(../images/liquid-admin/site/todo_lk.gif) no-repeat left center;
+	padding: 0 0 0 8px;
+}
+
+
+.photo_gallery {
+	overflow: hidden;
+}
+
+
+.gal_left {
+	background:url(../images/liquid-admin/site/gall_left.gif) repeat-y 0 2px;
+	
+}
+
+.gal_right {
+	background:url(../images/liquid-admin/site/gall_right.gif) repeat-y right 2px;
+	overflow: hidden;
+	width: 227px;
+	padding: 0 2px;
+}
+
+
+
+.gal_top {
+	background:url(../images/liquid-admin/site/gall_top.gif) no-repeat 112px top;
+}
+
+.gal_bottom {
+	background:url(../images/liquid-admin/site/gall_bottom.gif) no-repeat 112px bottom;
+	padding: 3px 0;
+	
+}
+
+
+.photo_gallery ul {
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	overflow: hidden;
+	background:url(../images/liquid-admin/site/gallery_ul.gif) repeat-y;
+}
+
+.photo_gallery li {
+	list-style: none;
+	margin: 0;
+	float: left;
+	width: 102px;
+	height: 77px;
+	padding: 6px;
+}
+
+.photo_gallery a {
+	display: block;
+	border: 3px solid #e4f0f6;
+	width: 96px;
+	height: 71px;
+	
+}
+
+.photo_gallery img {
+	display: block;
+	border: 0;
+}
+
+
+.section_content_footer {
+	width: 100%;
+	overflow: hidden;
+	
+	margin: -9px 0 0;
+	
+}
+
+.section_content_footer ul {
+	margin: 0;
+	padding: 17px 0 0 17px;
+	background: #ebf3f7;
+	width: 235px;
+	overflow: hidden;
+	
+}
+
+.section_content_footer li {
+	list-style: none;
+	margin: 0;
+	padding: 0 20px  0 0;
+	float: left;
+}
+
+
+.scf {
+	display: block;
+	overflow: hidden;
+	height: 8px;
+	background:url(../images/liquid-admin/site/section_content_footer.png) no-repeat;
+}
+
+.section_content_footer a:link, 
+.section_content_footer a:visited,
+.section_content_footer a:hover,
+.section_content_footer a:active {
+	font-size: 11px;
+	color: #406f85;
+	display: block;
+	float: left;
+	white-space: nowrap;
+	padding: 0 0 0 15px;
+}
+
+.plus {
+	background:url(../images/liquid-admin/site/plus.gif) no-repeat left center;
+}
+
+.list {
+	background:url(../images/liquid-admin/site/list.gif) no-repeat left center;
+}
+
+.next {
+	background:url(../images/liquid-admin/site/next.gif) no-repeat left center;
+}
+
+.quick_info_top {
+	height: 35px;
+	background:url(../images/liquid-admin/site/quick_info_top.png) no-repeat;
+	
+}
+
+.quick_info_top h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: #647c84;
+	font-weight: normal;
+	line-height: 32px;
+	padding: 3px 0 0 14px;
+}
+
+.quick_info_bottom {
+	display: block;
+	height: 12px;
+	overflow: hidden;
+	background:url(../images/liquid-admin/site/quick_info_bottom.png) no-repeat;
+}
+
+.quick_info_content {
+	background: #f3f8fb;
+	padding: 10px 15px 0;
+}
+
+.quick_info_content dl {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	line-height: 18px;
+	color: #7e898f;
+}
+
+.quick_info_content dt {
+	font-weight: bold;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+.quick_info_content dd {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+
+.calendar {
+	width: 235px;
+	padding: 146px 0 17px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+
+.calendar_top {
+	background:url(../images/liquid-admin/site/calendar_top.png) no-repeat;
+	height: 146px;
+	text-align: center;
+	color: #a4d6ed;
+	font-size: 13px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.calendar_top strong {
+	display: block;
+	font-size: 34px;
+	color: #fff;
+	font-weight: normal;
+	padding: 7px 0 0;
+}
+
+.calendar_bottom {
+	background:url(../images/liquid-admin/site/calendar_bottom.png) no-repeat;
+	height: 10px;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+
+.calendar_middle {
+	background:url(../images/liquid-admin/site/calendar_middle.png) repeat-y;
+}
+
+.calendar_data {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin-top: -60px;
+	
+}
+
+
+
+
+
+.cmonth {
+	width: 126px;
+	margin: 0 auto;
+	color: #d8e5a5;
+	font-weight: bold;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.calendar_prev {
+	display: block;
+	background:url(../images/liquid-admin/site/calendar_prev.gif) no-repeat;
+	width: 7px;
+	height: 7px;
+	text-indent: -3000px;
+	overflow: hidden;
+}
+
+.calendar_next {
+	display: block;
+	background:url(../images/liquid-admin/site/calendar_next.gif) no-repeat;
+	width: 7px;
+	height: 7px;
+	text-indent: -3000px;
+	overflow: hidden;
+}
+
+.calendar_prev:hover, 
+.calendar_next:hover {
+	background-position: 0 -7px;
+}
+
+.cont {
+	width: 184px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.chead {
+	width: 250px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.chead  li {
+	float: left;
+	margin: 0;
+	padding: 0 5px 0 0;
+	list-style: none;
+	width: 22px;
+	line-height: 22px;
+	font-weight: bold;
+	color: #a4d6ed;
+	font-size: 10px;
+	font-family: Tahoma;
+	text-align: center;
+}
+
+.cdays {
+	width: 190px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.cdays li {
+	list-style: none;
+	margin: 0;
+	padding: 0 5px 5px 0;
+	float: left;
+	width: 22px;
+	height: 22px;
+	text-align: center;
+	
+}
+
+.cdays  a:link, 
+.cdays a:visited, 
+.cdays a:active {
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	font-size: 10px;
+	font-family: tahoma;
+	background: #2d566b;
+	border: 1px solid #70a2b4;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.cdays a:hover {
+	border-color: #aed7e5;
+	text-decoration: none;
+	background: #2b3f49;
+}
+
+.cdays  a.event:link,
+.cdays  a.event:visited,
+.cdays  a.event:active {
+	background: #8aad00;
+	border-color: #5c700c;
+}
+
+.cdays  a.event:hover {
+	color: #fbff8e;
+	background: #92b117;
+	border-color: #c8ea42;
+}
+
+.cdays span {
+	display: block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	background: #4d7989;
+	border: 1px solid #70a2b4;
+}
+
+
+
+
+/* end sidebar */
+
+
+/* end content */
+
+
+
+/* start footer */
+#footer {
+	min-width: 1000px;
+	min-height: 44px;
+	background: #3e4d57;
+	border: solid #5d7282;
+	border-width: 3px 0 0;
+	margin: -47px 0 0;
+	font-size: 11px;
+	line-height: 16px;
+	color: #7e858a;
+	
+	
+}
+
+#footer a:link, 
+#footer a:visited, 
+#footer a:active {
+	color: #7e858b;
+}
+
+#footer a:hover {
+	color: #4d8dac;
+}
+
+#footer_inner {
+	width: 100%;
+	overflow: hidden;
+	padding: 5px 0 0;
+	
+}
+
+.copy {
+	margin: 0;
+	padding: 0 15px 0 15px;
+	width: 233px;
+	float: left;
+}
+
+.copy dt, .copy dd {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	float: left;
+}
+
+.copy dt em {
+	font-size: 10px;
+	color: #57636b;
+	font-style: normal;
+}
+
+.quick_links {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 530px;
+}
+
+.quick_links dt, .quick_links dd {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.quick_links ul {
+	margin: 0 0 0 -6px;
+	padding: 0;
+	float: left;
+	width: 120%;
+}
+
+.quick_links li {
+	list-style: none;
+	float: left;
+	margin: 0;
+	padding: 0 7px 0 6px;
+	background:url(../images/liquid-admin/site/footer_li_bg.gif) no-repeat right center;
+	
+}
+
+.help_links {
+	float: right;
+	margin: 0;
+	padding: 0 15px 0 0;
+	width: 172px;
+}
+
+.help_links dt, .help_links dd {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.help_links ul {
+	margin: 0 0 0 -6px;
+	padding: 0;
+	width: 140%; 
+	float: left;
+}
+
+.help_links li {
+	margin: 0;
+	padding: 0 7px 0 6px;
+	list-style: none;
+	float: left;
+	background:url(../images/liquid-admin/site/footer_li_bg.gif) no-repeat right center;
+}
+
+#footer li.last {
+	background: none;
+	padding-right: 0;
+}
+
+
+
+/* end footer */
+
+
+ 
+
+
+select.page-statuses
+{
+    float:left; 
+    margin-right:10px;
+}
+
+
+
+
+
+
+
+
+

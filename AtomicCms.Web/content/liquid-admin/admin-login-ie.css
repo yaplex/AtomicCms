@@ -1,0 +1,12 @@
+.input_wrapper  {
+	behavior: url(iepngfix.htc);
+}
+
+.formular {
+	height: 117px;
+}
+
+body {
+	behavior: url(csshover.htc);
+}
+

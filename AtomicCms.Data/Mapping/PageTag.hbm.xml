@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+    <class name="AtomicCms.Common.Models.PageTag, AtomicCms.Common" table="ac_PageTags" lazy="false">
+        <composite-id>
+            <key-many-to-one name="Page" column="PageId" lazy="proxy" class="AtomicCms.Common.Entities.CmsPage, AtomicCms.Common"></key-many-to-one>
+            <key-many-to-one name="Tag" column="TagId" lazy="proxy" class="AtomicCms.Common.Entities.CmsTag, AtomicCms.Common"></key-many-to-one>
+        </composite-id>
+    </class>
+</hibernate-mapping>
+

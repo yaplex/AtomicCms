@@ -1,0 +1,14 @@
+﻿@using AtomicCms.Common.Entities
+@using AtomicCms.Common.Extensions
+@using AtomicCms.Web.Core.Extensions
+@model ICollection<CmsPage>
+<h3 class="title">@Html.Resource("Resources", "LastAdded")</h3>
+<ul class="line">
+    @foreach (CmsPage item in Model)
+    {
+        <li>
+            @Html.ActionLink(item.PageTitle.Ellipsis(27), "Content", "Home",
+                                               new { id = item.Id, name = item.Alias }, new { title = item.SeoTitle })
+        </li>
+    }
+</ul>

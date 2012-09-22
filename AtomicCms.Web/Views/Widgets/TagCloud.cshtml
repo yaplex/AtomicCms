@@ -1,0 +1,21 @@
+﻿@using AtomicCms.Common.Entities
+@using AtomicCms.Common.Extensions
+@using AtomicCms.Common.Models
+@using AtomicCms.Web.Core.Extensions
+@model ICollection<TagCount>
+<div class="tags-cloud">
+    <h3 class="title">
+        Tags
+    </h3>
+    <ul class="tags-cloud">
+        @{
+            int max = Model.Count;
+        }
+        @foreach (TagCount entry in Model)
+        {
+            <li><a href="/tag/@entry.Tag.Name" class="@entry.GetTagClass(max)">
+                @entry.Tag.Name
+            </a></li>
+        }
+    </ul>
+</div>

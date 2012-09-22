@@ -1,0 +1,2 @@
+﻿ALTER TABLE [dbo].[ac_Pages] ADD  CONSTRAINT [PK_Page] PRIMARY KEY CLUSTERED 
+([Id])

@@ -1,0 +1,615 @@
+/* start forms */
+
+.button {
+	display: block;
+	color: #fff;
+	/*background:url(../images/liquid-admin/submit_middle.gif) repeat-x;*/
+	
+	font-size: 11px;
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	
+	font-weight: bold;
+	text-decoration: none;
+	
+}
+
+a.button:link, a.button:visited,  a.button:active {
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+}
+
+a.button:hover *, .button:hover * {
+	text-decoration: underline;
+}
+
+
+.button span {
+	background:url(../images/liquid-admin/submit_left.gif) no-repeat;
+	display: block;
+	float: left;
+	white-space: nowrap;
+}
+
+
+
+.button em {
+	display:block;
+	padding: 0 0 0 20px;
+	font-style: normal;
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	min-height: 1px;
+}
+
+.button_ico {
+	display: block;
+	width: 20px;
+	height: 21px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+.button span span {
+	background:url(../images/liquid-admin/submit_right.gif) no-repeat right 0;
+	display: block;
+	padding: 0 14px;
+	height: 21px;
+	line-height: 22px;
+}
+
+
+
+.button input {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 1000px;
+	width: 1000px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	position: absolute;
+	top: -100px;
+	left: -100px;
+	cursor: pointer;
+}
+
+
+a.add_new {
+	background-image:url(../images/liquid-admin/site/tables/add_new_middle.gif);
+	background-color: #a8d741;
+}
+
+a.add_new span {
+	background-image:url(../images/liquid-admin/site/tables/add_new_left.gif);
+}
+
+a.add_new span span {
+	background-image:url(../images/liquid-admin/site/tables/add_new_right.gif);
+}
+
+a.check_all {
+	background-image:url(../images/liquid-admin/site/tables/check_all_middle.gif);
+	background-color: #8bc8e1;
+}
+
+a.check_all span {
+	background-image:url(../images/liquid-admin/site/tables/check_all_left.gif);
+}
+
+a.check_all span span {
+	background-image:url(../images/liquid-admin/site/tables/check_all_right.gif);
+}
+
+
+a.uncheck_all {
+	background-image:url(../images/liquid-admin/site/tables/uncheck_all_middle.gif);
+	background-color: #91cbe2;
+}
+
+a.uncheck_all span {
+	background-image:url(../images/liquid-admin/site/tables/uncheck_all_left.gif);
+}
+
+a.uncheck_all span span {
+	background-image:url(../images/liquid-admin/site/tables/uncheck_all_right.gif);
+}
+
+
+span.approve {
+	background-image:url(../images/liquid-admin/site/tables/approve_middle.gif);
+	background-color: #339fd0;
+}
+
+span.approve span {
+	background-image:url(../images/liquid-admin/site/tables/approve_left.gif);
+}
+
+span.approve span span {
+	background-image:url(../images/liquid-admin/site/tables/approve_right.gif);
+}
+
+
+
+.general_form, .general_form fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.general_form fieldset {
+	width: 100%;
+	overflow: hidden;
+	padding:  0;
+	position: relative;
+	top: 0;
+	left: 0;
+	
+}
+
+.forms {
+	float: left;
+	width: 620px;
+}
+
+.general_form {
+	font-size: 13px;
+	line-height: 24px;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #6b98a8;
+	margin: 0;
+	padding: 0 0 10px;
+	white-space: nowrap;
+}
+
+.general_form .row {
+	width: 100%;
+	overflow: hidden;
+	padding: 0 0 11px;
+	float: left;
+}
+
+.general_form  label {
+	display: block;
+	float: left;
+	font-weight: bold;
+	width: 105px;
+	line-height: 22px;
+}
+
+.general_form .inputs {
+	float: left;
+	width: 520px;
+}
+
+.inputs ul {
+	margin: 0;
+	padding: 0;
+}
+
+.inputs li {
+	float: left;
+	margin: 0;
+	padding:0 15px 0 0;
+	list-style: none;
+}
+
+.general_form .input_wrapper {
+	border: 1px solid #cecece;
+	display: block;
+	background: #fefefe url(../images/liquid-admin/site/forms/input_text2.gif) repeat-x;
+	float: left;
+	padding: 2px 4px;
+	width: 194px;
+	margin: 0 8px 0 0;
+	line-height: normal;
+	
+	
+}
+
+.input_wrapper select {
+	width: 100%;
+}
+
+.general_form  .blank {
+	border: 0;
+	background: transparent;
+}
+
+.general_form  .medium_input {
+	width: 86px;
+}
+
+.general_form  .short_input {
+	width: 48px;
+	overflow: hidden;
+}
+
+.general_form .input_wrapper input.text {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	width: 100%;
+	display: block;
+	
+}
+
+
+
+
+
+.send_form_btn {
+	background-image:url(../images/liquid-admin/site/forms/send_form_middle.gif);
+	background-color: #339fd0;
+	
+}
+
+.send_form_btn span {
+	background-image:url(../images/liquid-admin/site/forms/send_form_left.gif);
+}
+
+.send_form_btn span span {
+	background-image:url(../images/liquid-admin/site/forms/send_form_right.gif);
+	
+}
+
+
+.cancel_btn {
+	background-image:url(../images/liquid-admin/site/forms/cancel_middle.gif);
+	background-color: #9ed0e4;
+}
+
+.cancel_btn span {
+	background-image:url(../images/liquid-admin/site/forms/cancel_left.gif);
+}
+
+.cancel_btn span span {
+	background-image:url(../images/liquid-admin/site/forms/cancel_right.gif);
+}
+
+
+.orange_btn {
+	background-image:url(../images/liquid-admin/site/forms/orange_middle.gif);
+	background-color: #e77d04;
+}
+
+.orange_btn span {
+	background-image:url(../images/liquid-admin/site/forms/orange_left.gif);
+}
+
+.orange_btn span span {
+	background-image:url(../images/liquid-admin/site/forms/orange_right.gif);
+}
+
+
+
+.red_btn {
+	background-image:url(../images/liquid-admin/site/forms/red_middle.gif);
+	background-color: #b01604;
+}
+
+.red_btn a
+{
+    color:#ffffff;
+}
+
+.red_btn span {
+	background-image:url(../images/liquid-admin/site/forms/red_left.gif);
+}
+
+.red_btn span span {
+	background-image:url(../images/liquid-admin/site/forms/red_right.gif);
+}
+
+
+.grey_btn {
+	background-image:url(../images/liquid-admin/site/forms/grey_middle.gif);
+	background-color: #bfc2c5;
+	color: #5a5a5a !important;
+}
+
+.grey_btn span {
+	background-image:url(../images/liquid-admin/site/forms/grey_left.gif);
+}
+
+.grey_btn span span {
+	background-image:url(../images/liquid-admin/site/forms/grey_right.gif);
+}
+
+
+.light_blue_btn {
+	background-image:url(../images/liquid-admin/site/forms/light_blue_middle.gif);
+	background-color: #bfdfec;
+	color: #6b8894 !important;
+}
+
+.light_blue_btn span {
+	background-image:url(../images/liquid-admin/site/forms/light_blue_left.gif);
+}
+
+.light_blue_btn span span {
+	background-image:url(../images/liquid-admin/site/forms/light_blue_right.gif);
+}
+
+
+.buttons {
+	float: left;
+	padding: 0 0 0 105px;
+}
+
+.buttons  ul {
+	margin: 0;
+	padding: 0 30px 0 0;
+	float: left;
+	list-style:none;
+}
+
+.buttons ul li {
+	float: left;
+	margin: 0;
+	padding: 0 7px 0 0;
+}
+
+
+
+
+
+/* end forms */
+
+
+/* start forms and messages */
+
+
+.general_form {
+	
+	
+	
+}
+
+
+.general_form .forms {
+	width: 100%;
+}
+
+.general_form .inputs {
+	width: 518px;
+	
+}
+
+.general_form .textarea_wrapper {
+	width: 510px;
+	height: 236px;
+	margin: 0 !important;
+	
+}
+
+.textarea_wrapper textarea {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background: transparent;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 13px;
+	font-family: 'Trebuchet Ms';
+}
+
+.inputs ul.mc_menu {
+	padding: 0 0 10px;
+}
+
+.mc_menu, .mc_menu li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 17px;
+	font-size: 12px;
+}
+
+.mc_menu {
+	width: 99%;
+	overflow: hidden;
+	padding: 0 0 5px;
+}
+
+.mc_menu a:link, .mc_menu a:visited, .mc_menu a:hover, .mc_menu a:active {
+	color: #000;
+	display: block;
+	background: #f0f0f0;
+	border: 1px solid #d5d5d5;
+	padding: 0 10px;
+}
+
+
+
+.mc_menu li {
+	float: left;
+	padding: 0 3px 0 0;
+}
+
+.inputs .inline {
+	float: left;
+	padding: 0 15px 0 0;
+	
+}
+
+.inputs .inline li {
+	float: none;
+	padding: 0;
+	margin: 0;
+	list-style-position: outside;
+	
+	
+}
+
+.checkbox, .radio {
+	vertical-align: middle;
+	margin: 0;
+}
+
+.system {
+	display: block;
+	float: left;
+	padding: 0 0 0 19px;
+	white-space: nowrap;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.positive {
+	color: #82a800;
+	background-image:url(../images/liquid-admin/site/forms/positive.gif);
+}
+
+.negative {
+	color: #b86464;
+	background-image:url(../images/liquid-admin/site/forms/negative.gif);
+}
+
+.system_messages {
+	margin: 0;
+	padding: 15px 0 0;
+	
+}
+
+.system_messages li {
+	list-style:none;
+	margin: 0 0 7px;
+	padding: 6px 0 6px 38px;
+	font-size: 11px;
+	position: relative;
+	top: 0;
+	left: 0;
+	min-height: 1px;
+	list-style-position: outside;
+	
+}
+
+.white {
+	background: #fefefe url(../images/liquid-admin/site/forms/white_message.gif) repeat-x;
+	border: 1px solid #dbdbdb;
+	
+	
+}
+
+.system_title {
+	font-size: 11px;
+}
+
+.ico {
+	display: block;
+	width: 23px;
+	height: 23px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	position: absolute;
+	left: 4px;
+	top: 1px;
+	
+}
+
+.white .system_title {
+	color: #4f4f4f;
+}
+
+.white .ico {
+	background-image:url(../images/liquid-admin/site/forms/white_ico.png);
+}
+
+.red {
+	background: #e2c5c5 url(../images/liquid-admin/site/forms/red_message.gif) repeat-x;
+	border: 1px solid #cf9e9e;
+	
+}
+
+.red .system_title {
+	color: #ae2727;
+}
+
+.red .ico {
+	background-image:url(../images/liquid-admin/site/forms/red_ico.png);
+}
+
+
+
+.blue {
+	background: #c4dde3 url(../images/liquid-admin/site/forms/blue_message.gif) repeat-x;
+	border: 1px solid #9cc6d0;
+	
+}
+
+.blue .system_title {
+	color: #0f4b74;
+}
+
+.blue .ico {
+	background-image:url(../images/liquid-admin/site/forms/blue_ico.png);
+}
+
+.green {
+	background: #c7e5c2 url(../images/liquid-admin/site/forms/green_message.gif) repeat-x;
+	border: 1px solid #a2d399;
+	
+}
+
+.green .system_title {
+	color: #386d19;
+}
+
+.green .ico {
+	background-image:url(../images/liquid-admin/site/forms/green_ico.png);
+}
+
+
+.yellow {
+	background: #eae1b1 url(../images/liquid-admin/site/forms/yellow_message.gif) repeat-x;
+	border: 1px solid #e0d182;
+	
+}
+
+.yellow .system_title {
+	color: #675918;
+}
+
+.yellow .ico {
+	background-image:url(../images/liquid-admin/site/forms/yellow_ico.png);
+}
+
+.wide
+{
+    width:99% !important;
+}
+
+input.large
+{
+    font-size:x-large;
+}
+
+.wideInputs
+{
+    width:90% !important;
+}
+
+/* end forms and messages */
+

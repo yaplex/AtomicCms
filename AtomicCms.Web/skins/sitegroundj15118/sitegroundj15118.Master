@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/BaseSkinMaster.Master" AutoEventWireup="true"
+    Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="AtomicCms.Common.Constants" %>
+<%@ Import Namespace="AtomicCms.Common.Entities" %>
+<asp:Content ContentPlaceHolderID="TitleContent" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="TitleContent">
+        <%=((CmsPage) Model).SeoTitle%>
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="HeadContent" runat="server">
+    <link rel="stylesheet" href='<%=Url.Content("~/skins/sitegroundj15118/styles/template.css")%>'
+        type="text/css" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent">
+        <meta name="keywords" content="<%=((CmsPage) Model).MetaKeywords%>" />
+        <meta name="description" content="<%=((CmsPage) Model).MetaDescription%>" />
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content" ContentPlaceHolderID="BodyContent" runat="server">
+    <div id="page_bg">
+        <div id="wrapper">
+            <div id="header">
+                <div id="img">
+                </div>
+                <%Html.RenderAction("Show", "Navigation", new { menuName = "TopMenu" });%>
+                <div class="clr">
+                </div>
+                <div class="logo">
+                    <table cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>
+                                <h2>
+                                    <a href="/">
+                                        <%Html.RenderAction("FreeHtml", "Tools",
+                                                          new { htmlKey = Constant.Settings.SiteLogo });%></a></h2>
+                                <h3><%Html.RenderAction("FreeHtml", "Tools",
+                                                          new { htmlKey = Constant.Settings.SiteSubLogo });%></h3>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clr">
+                </div>
+                <div class="cpathway">
+                    <span class="breadcrumbs pathway"></span>
+                </div>
+                <div class="clr">
+                </div>
+            </div>
+            <div id="content_left">
+                <div id="leftcolumn">
+                    <%Html.RenderAction("Show", "Navigation", new { menuName = "LeftMenu" });%>
+                    <%Html.RenderAction("TagCloud", "Widgets");%>
+                </div>
+                <div id="maincolumn_left">
+                    <div class="nopad">
+                        <div class="componentheading">
+                            <asp:ContentPlaceHolder ID="PageTitle" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <table class="blog" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td valign="top">
+                                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="clr">
+                </div>
+            </div>
+            <div id="footer">
+                <%Html.RenderAction("FreeHtml", "Tools", new { htmlKey = "copyrights" });%>
+                <a class="sgfooter" target="_blank" href="http://www.siteground.com">Template by SG web hosting</a>
+            </div>
+        </div>
+    </div>
+</asp:Content>

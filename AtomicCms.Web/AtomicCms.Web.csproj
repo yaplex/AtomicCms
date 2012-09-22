@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BAEECCC0-B3EE-44AD-B546-999A58CCA23D}</ProjectGuid>
+    <ProjectTypeGuids>{e53f8fea-eae0-44a6-8774-ffd645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AtomicCms.Web</RootNamespace>
+    <AssemblyName>AtomicCms.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\AtomicCms.Files\AtomicCms.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly>
+    </CodeContractsCustomRewriterAssembly>
+    <CodeContractsCustomRewriterClass>
+    </CodeContractsCustomRewriterClass>
+    <CodeContractsLibPaths>
+    </CodeContractsLibPaths>
+    <CodeContractsPlatformPath>
+    </CodeContractsPlatformPath>
+    <CodeContractsExtraAnalysisOptions>
+    </CodeContractsExtraAnalysisOptions>
+    <CodeContractsBaseLineFile>
+    </CodeContractsBaseLineFile>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>1607</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.3.1.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.3.1.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.Castle.3.1.0.4000\lib\Net35\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.WebPages">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AtomicCms.Files\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resources.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resources.ru.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CmsPageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MenuController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\AtomicCmsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FileUploadController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SyndicationController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MenuItemController.cs" />
+    <Compile Include="Controllers\ToolsController.cs" />
+    <Compile Include="Controllers\WidgetsController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\error\500servererror.htm" />
+    <Content Include="content\liquid-admin\validation.css" />
+    <Content Include="scripts\ckeditor\adapters\jquery.js" />
+    <Content Include="scripts\ckeditor\ckeditor.js" />
+    <Content Include="scripts\ckeditor\ckeditor_basic.js" />
+    <Content Include="scripts\ckeditor\ckeditor_basic_source.js" />
+    <Content Include="scripts\ckeditor\ckeditor_source.js" />
+    <Content Include="scripts\ckeditor\config.js" />
+    <Content Include="scripts\ckeditor\contents.css" />
+    <Content Include="scripts\ckeditor\images\spacer.gif" />
+    <Content Include="scripts\ckeditor\lang\af.js" />
+    <Content Include="scripts\ckeditor\lang\ar.js" />
+    <Content Include="scripts\ckeditor\lang\bg.js" />
+    <Content Include="scripts\ckeditor\lang\bn.js" />
+    <Content Include="scripts\ckeditor\lang\bs.js" />
+    <Content Include="scripts\ckeditor\lang\ca.js" />
+    <Content Include="scripts\ckeditor\lang\cs.js" />
+    <Content Include="scripts\ckeditor\lang\cy.js" />
+    <Content Include="scripts\ckeditor\lang\da.js" />
+    <Content Include="scripts\ckeditor\lang\de.js" />
+    <Content Include="scripts\ckeditor\lang\el.js" />
+    <Content Include="scripts\ckeditor\lang\en-au.js" />
+    <Content Include="scripts\ckeditor\lang\en-ca.js" />
+    <Content Include="scripts\ckeditor\lang\en-gb.js" />
+    <Content Include="scripts\ckeditor\lang\en.js" />
+    <Content Include="scripts\ckeditor\lang\eo.js" />
+    <Content Include="scripts\ckeditor\lang\es.js" />
+    <Content Include="scripts\ckeditor\lang\et.js" />
+    <Content Include="scripts\ckeditor\lang\eu.js" />
+    <Content Include="scripts\ckeditor\lang\fa.js" />
+    <Content Include="scripts\ckeditor\lang\fi.js" />
+    <Content Include="scripts\ckeditor\lang\fo.js" />
+    <Content Include="scripts\ckeditor\lang\fr-ca.js" />
+    <Content Include="scripts\ckeditor\lang\fr.js" />
+    <Content Include="scripts\ckeditor\lang\gl.js" />
+    <Content Include="scripts\ckeditor\lang\gu.js" />
+    <Content Include="scripts\ckeditor\lang\he.js" />
+    <Content Include="scripts\ckeditor\lang\hi.js" />
+    <Content Include="scripts\ckeditor\lang\hr.js" />
+    <Content Include="scripts\ckeditor\lang\hu.js" />
+    <Content Include="scripts\ckeditor\lang\is.js" />
+    <Content Include="scripts\ckeditor\lang\it.js" />
+    <Content Include="scripts\ckeditor\lang\ja.js" />
+    <Content Include="scripts\ckeditor\lang\km.js" />
+    <Content Include="scripts\ckeditor\lang\ko.js" />
+    <Content Include="scripts\ckeditor\lang\lt.js" />
+    <Content Include="scripts\ckeditor\lang\lv.js" />
+    <Content Include="scripts\ckeditor\lang\mn.js" />
+    <Content Include="scripts\ckeditor\lang\ms.js" />
+    <Content Include="scripts\ckeditor\lang\nb.js" />
+    <Content Include="scripts\ckeditor\lang\nl.js" />
+    <Content Include="scripts\ckeditor\lang\no.js" />
+    <Content Include="scripts\ckeditor\lang\pl.js" />
+    <Content Include="scripts\ckeditor\lang\pt-br.js" />
+    <Content Include="scripts\ckeditor\lang\pt.js" />
+    <Content Include="scripts\ckeditor\lang\ro.js" />
+    <Content Include="scripts\ckeditor\lang\ru.js" />
+    <Content Include="scripts\ckeditor\lang\sk.js" />
+    <Content Include="scripts\ckeditor\lang\sl.js" />
+    <Content Include="scripts\ckeditor\lang\sr-latn.js" />
+    <Content Include="scripts\ckeditor\lang\sr.js" />
+    <Content Include="scripts\ckeditor\lang\sv.js" />
+    <Content Include="scripts\ckeditor\lang\th.js" />
+    <Content Include="scripts\ckeditor\lang\tr.js" />
+    <Content Include="scripts\ckeditor\lang\uk.js" />
+    <Content Include="scripts\ckeditor\lang\vi.js" />
+    <Content Include="scripts\ckeditor\lang\zh-cn.js" />
+    <Content Include="scripts\ckeditor\lang\zh.js" />
+    <Content Include="scripts\ckeditor\lang\_languages.js" />
+    <Content Include="scripts\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="scripts\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="scripts\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="scripts\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="scripts\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="scripts\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="scripts\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="scripts\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="scripts\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="scripts\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="scripts\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="scripts\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="scripts\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="scripts\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="scripts\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="scripts\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="scripts\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="scripts\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="scripts\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="scripts\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="scripts\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="scripts\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="scripts\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="scripts\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="scripts\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="scripts\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="scripts\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="scripts\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="scripts\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="scripts\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="scripts\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="scripts\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="scripts\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="scripts\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="scripts\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="scripts\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="scripts\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="scripts\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="scripts\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="scripts\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="scripts\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="scripts\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="scripts\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="scripts\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="scripts\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="scripts\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="scripts\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="scripts\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="scripts\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="scripts\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="scripts\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="scripts\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="scripts\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="scripts\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="scripts\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="scripts\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="scripts\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="scripts\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="scripts\ckeditor\skins\kama\dialog.css" />
+    <Content Include="scripts\ckeditor\skins\kama\editor.css" />
+    <Content Include="scripts\ckeditor\skins\kama\icons.png" />
+    <Content Include="scripts\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="scripts\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="scripts\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="scripts\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="scripts\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="scripts\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="scripts\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="scripts\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="scripts\ckeditor\skins\kama\skin.js" />
+    <Content Include="scripts\ckeditor\skins\kama\templates.css" />
+    <Content Include="scripts\ckeditor\skins\office2003\dialog.css" />
+    <Content Include="scripts\ckeditor\skins\office2003\editor.css" />
+    <Content Include="scripts\ckeditor\skins\office2003\icons.png" />
+    <Content Include="scripts\ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="scripts\ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="scripts\ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="scripts\ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="scripts\ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="scripts\ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="scripts\ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="scripts\ckeditor\skins\office2003\skin.js" />
+    <Content Include="scripts\ckeditor\skins\office2003\templates.css" />
+    <Content Include="scripts\ckeditor\skins\v2\dialog.css" />
+    <Content Include="scripts\ckeditor\skins\v2\editor.css" />
+    <Content Include="scripts\ckeditor\skins\v2\icons.png" />
+    <Content Include="scripts\ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="scripts\ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="scripts\ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="scripts\ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="scripts\ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="scripts\ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="scripts\ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="scripts\ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="scripts\ckeditor\skins\v2\skin.js" />
+    <Content Include="scripts\ckeditor\skins\v2\templates.css" />
+    <Content Include="scripts\ckeditor\themes\default\theme.js" />
+    <Content Include="scripts\liquid.admin.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shAutoloader.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushAS3.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushBash.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushCpp.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushCSharp.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushCss.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushDelphi.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushDiff.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushErlang.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushGroovy.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushJava.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushJScript.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushPerl.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushPhp.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushPlain.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushPython.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushRuby.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushSass.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushScala.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushSql.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushVb.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shBrushXml.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shCore.js" />
+    <Content Include="scripts\syntaxhighlighter\scripts\shLegacy.js" />
+    <Content Include="scripts\syntaxhighlighter\styles\shCore.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shCoreDefault.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shCoreDjango.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shCoreEclipse.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shCoreEmacs.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shCoreMDUltra.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shCoreMidnight.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shCoreRDark.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shThemeDefault.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shThemeDjango.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shThemeEclipse.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shThemeEmacs.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shThemeMDUltra.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shThemeMidnight.css" />
+    <Content Include="scripts\syntaxhighlighter\styles\shThemeRDark.css" />
+    <Content Include="skins\simple-white\images\breadcrumbs.png" />
+    <Content Include="skins\simple-white\images\comments_arrow.png" />
+    <Content Include="skins\simple-white\images\comments_avatar.png" />
+    <Content Include="skins\simple-white\images\emailButton.png" />
+    <Content Include="skins\simple-white\images\error.png" />
+    <Content Include="skins\simple-white\images\logo.png" />
+    <Content Include="skins\simple-white\images\menu_dropdown_level3.png" />
+    <Content Include="skins\simple-white\images\menu_line_item.png" />
+    <Content Include="skins\simple-white\images\menu_sidebar_level2.png" />
+    <Content Include="skins\simple-white\images\menu_sidebar_parent.png" />
+    <Content Include="skins\simple-white\images\module_badges.png" />
+    <Content Include="skins\simple-white\images\module_icons.png" />
+    <Content Include="skins\simple-white\images\pdf_button.png" />
+    <Content Include="skins\simple-white\images\printButton.png" />
+    <Content Include="skins\simple-white\images\searchbox_loader.gif" />
+    <Content Include="skins\simple-white\images\searchbox_magnifier.png" />
+    <Content Include="skins\simple-white\images\searchbox_reset.png" />
+    <Content Include="skins\simple-white\images\tools\box_download.png" />
+    <Content Include="skins\simple-white\images\tools\box_hint.png" />
+    <Content Include="skins\simple-white\images\tools\box_info.png" />
+    <Content Include="skins\simple-white\images\tools\box_warning.png" />
+    <Content Include="skins\simple-white\images\tools\line_dotted.png" />
+    <Content Include="skins\simple-white\images\tools\list_check.png" />
+    <Content Include="skins\simple-white\images\totop_scroller.png" />
+    <Content Include="skins\simple-white\styles\style.css" />
+    <Content Include="skins\simple\images\arr-square.gif" />
+    <Content Include="skins\simple\images\banner_02.jpg" />
+    <Content Include="skins\simple\images\bg.jpg" />
+    <Content Include="skins\simple\images\but_hover.jpg" />
+    <Content Include="skins\simple\images\h3_bg.jpg" />
+    <Content Include="skins\simple\images\header_bg.jpg" />
+    <Content Include="skins\simple\images\indent1.png" />
+    <Content Include="skins\simple\images\indent2.png" />
+    <Content Include="skins\simple\images\indent3.png" />
+    <Content Include="skins\simple\images\indent4.png" />
+    <Content Include="skins\simple\images\li.jpg" />
+    <Content Include="skins\simple\images\li1.jpg" />
+    <Content Include="skins\simple\images\l_r_bottom.jpg" />
+    <Content Include="skins\simple\images\l_r_col_middle.jpg" />
+    <Content Include="skins\simple\images\l_r_top.jpg" />
+    <Content Include="skins\simple\images\menu_row.jpg" />
+    <Content Include="skins\simple\images\menu_separator.jpg" />
+    <Content Include="skins\simple\images\news_separator.jpg" />
+    <Content Include="skins\simple\images\page_bg.jpg" />
+    <Content Include="skins\simple\images\pathway.jpg" />
+    <Content Include="skins\simple\images\RSS.png" />
+    <Content Include="skins\simple\images\search.jpg" />
+    <Content Include="skins\simple\images\search_button.jpg" />
+    <Content Include="skins\simple\images\spacer.png" />
+    <Content Include="skins\simple\images\sub_menu_row.jpg" />
+    <Content Include="skins\simple\images\top_menu_bg.jpg" />
+    <Content Include="skins\simple\styles\editor.css" />
+    <Content Include="skins\simple\styles\ie6.css" />
+    <Content Include="skins\simple\styles\style.css" />
+    <Content Include="skins\simple\Views\error\NotFound.aspx" />
+    <Content Include="skins\simple\Views\Home\LastPages.ascx" />
+    <Content Include="skins\simple\Views\Home\Index.aspx" />
+    <Content Include="skins\simple\Views\Home\Tag.aspx" />
+    <Content Include="skins\simple\Views\Navigation\LeftMenu.ascx" />
+    <Content Include="skins\simple\Views\Navigation\TopMenu.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="skins\siteground-j15-183\images\box_b.png" />
+    <Content Include="skins\siteground-j15-183\images\box_h3.png" />
+    <Content Include="skins\siteground-j15-183\images\but.gif" />
+    <Content Include="skins\siteground-j15-183\images\content_t.png" />
+    <Content Include="skins\siteground-j15-183\images\headerimg.jpg" />
+    <Content Include="skins\siteground-j15-183\images\indent1.png" />
+    <Content Include="skins\siteground-j15-183\images\indent2.png" />
+    <Content Include="skins\siteground-j15-183\images\indent3.png" />
+    <Content Include="skins\siteground-j15-183\images\indent4.png" />
+    <Content Include="skins\siteground-j15-183\images\inputbox.png" />
+    <Content Include="skins\siteground-j15-183\images\menu_arrow.gif" />
+    <Content Include="skins\siteground-j15-183\images\menu_arrow_hover.gif" />
+    <Content Include="skins\siteground-j15-183\images\news_bg.png" />
+    <Content Include="skins\siteground-j15-183\images\page_bg.png" />
+    <Content Include="skins\siteground-j15-183\images\search_btn.png" />
+    <Content Include="skins\siteground-j15-183\images\small-headerimg.jpg" />
+    <Content Include="skins\siteground-j15-183\images\t_menu_bg.png" />
+    <Content Include="skins\siteground-j15-183\images\t_menu_btn.png" />
+    <Content Include="skins\siteground-j15-183\images\t_menu_btn_l.png" />
+    <Content Include="skins\siteground-j15-183\styles\style.css" />
+    <Content Include="skins\sitegroundj15118\images\arrow.png" />
+    <Content Include="skins\sitegroundj15118\images\banner_01.jpg" />
+    <Content Include="skins\sitegroundj15118\images\banner_02.jpg" />
+    <Content Include="skins\sitegroundj15118\images\box_b.png" />
+    <Content Include="skins\sitegroundj15118\images\box_h3.png" />
+    <Content Include="skins\sitegroundj15118\images\box_h3_r.png" />
+    <Content Include="skins\sitegroundj15118\images\but.gif" />
+    <Content Include="skins\sitegroundj15118\images\content.png" />
+    <Content Include="skins\sitegroundj15118\images\content_l.png" />
+    <Content Include="skins\sitegroundj15118\images\content_r.png" />
+    <Content Include="skins\sitegroundj15118\images\footer.png" />
+    <Content Include="skins\sitegroundj15118\images\headerimg.jpg" />
+    <Content Include="skins\sitegroundj15118\images\img.jpg" />
+    <Content Include="skins\sitegroundj15118\images\indent1.png" />
+    <Content Include="skins\sitegroundj15118\images\indent2.png" />
+    <Content Include="skins\sitegroundj15118\images\indent3.png" />
+    <Content Include="skins\sitegroundj15118\images\indent4.png" />
+    <Content Include="skins\sitegroundj15118\images\index.html" />
+    <Content Include="skins\sitegroundj15118\images\menu_arrow.png" />
+    <Content Include="skins\sitegroundj15118\images\menu_arrow_hover.png" />
+    <Content Include="skins\sitegroundj15118\images\page_bg.png" />
+    <Content Include="skins\sitegroundj15118\images\search_bg.png" />
+    <Content Include="skins\sitegroundj15118\images\sg_background.gif" />
+    <Content Include="skins\sitegroundj15118\images\t_menu_bg.png" />
+    <Content Include="skins\sitegroundj15118\images\t_menu_divider.png" />
+    <Content Include="skins\sitegroundj15118\images\wrapper.png" />
+    <Content Include="skins\sitegroundj15118\styles\template.css" />
+    <Content Include="skins\sitegroundj15118\views\error\NotFound.aspx" />
+    <Content Include="skins\sitegroundj15118\views\home\Copy of Index.aspx" />
+    <Content Include="skins\sitegroundj15118\views\home\StartPage.aspx" />
+    <Content Include="skins\sitegroundj15118\views\home\Tag.aspx" />
+    <Content Include="skins\sitegroundj15118\views\navigation\LeftMenu.ascx" />
+    <Content Include="skins\sitegroundj15118\views\navigation\TopMenu.ascx" />
+    <Content Include="skins\sitegroundj1517\styles\style.css" />
+    <Content Include="skins\sitegroundj1517\images\banner_01.jpg" />
+    <Content Include="skins\sitegroundj1517\images\banner_02.jpg" />
+    <Content Include="skins\sitegroundj1517\images\bg_site.jpg" />
+    <Content Include="skins\sitegroundj1517\images\h3.jpg" />
+    <Content Include="skins\sitegroundj1517\images\header.jpg" />
+    <Content Include="skins\sitegroundj1517\images\indent1.png" />
+    <Content Include="skins\sitegroundj1517\images\indent2.png" />
+    <Content Include="skins\sitegroundj1517\images\indent3.png" />
+    <Content Include="skins\sitegroundj1517\images\indent4.png" />
+    <Content Include="skins\sitegroundj1517\images\index.html" />
+    <Content Include="skins\sitegroundj1517\images\menu_row.jpg" />
+    <Content Include="skins\sitegroundj1517\images\menu_row_cur.jpg" />
+    <Content Include="skins\sitegroundj1517\images\spacer.png" />
+    <Content Include="skins\sitegroundj1517\views\Error\NotFound.aspx" />
+    <Content Include="skins\sitegroundj1517\views\home\StartPage.aspx" />
+    <Content Include="skins\sitegroundj1517\views\home\Index.aspx" />
+    <Content Include="skins\sitegroundj1517\views\home\Tag.aspx" />
+    <Content Include="skins\sitegroundj1517\views\navigation\LeftMenu.ascx" />
+    <Content Include="skins\sitegroundj1517\views\navigation\TopMenu.ascx" />
+    <Content Include="uploads\facebook.png" />
+    <Content Include="uploads\feed.png" />
+    <Content Include="uploads\twitter.png" />
+    <Content Include="Views\Shared\NotFound.aspx" />
+    <Content Include="Views\Shared\NotFoundContent.ascx" />
+    <Content Include="Views\Widgets\TagCloud.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="scripts\MicrosoftAjax.js" />
+    <Content Include="scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1.min-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.min-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AtomicCms.Common\AtomicCms.Common.csproj">
+      <Project>{CEC587BE-506A-4CEB-9FF7-B91A2067AD76}</Project>
+      <Name>AtomicCms.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AtomicCms.Data\AtomicCms.Data.csproj">
+      <Project>{DA9F9EFB-7E31-4FC1-8603-44CB7C3E52C2}</Project>
+      <Name>AtomicCms.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AtomicCms.Services\AtomicCms.Services.csproj">
+      <Project>{99ED473E-8262-40BF-9472-C9D9161B2159}</Project>
+      <Name>AtomicCms.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AtomicCms.Web.Core\AtomicCms.Web.Core.csproj">
+      <Project>{29379522-4A6F-498F-B1FA-1F495509E35C}</Project>
+      <Name>AtomicCms.Web.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Shared\LiquidAdmin.Master" />
+    <Content Include="log4net.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="skins\simple\simple.Master" />
+    <Content Include="skins\simple\Views\Web.config" />
+    <None Include="..\AtomicCms.Files\AtomicCms.snk">
+      <Link>AtomicCms.snk</Link>
+    </None>
+    <Content Include="packages.config" />
+    <None Include="scripts\ckeditor\ckeditor.pack" />
+    <Content Include="Views\Shared\BaseSkinMaster.Master" />
+    <Content Include="content\images\authentication.png" />
+    <Content Include="content\images\cancel.gif" />
+    <Content Include="content\images\caption.gif" />
+    <Content Include="content\images\cart.jpg" />
+    <Content Include="content\images\delete.gif" />
+    <Content Include="content\images\error.gif" />
+    <Content Include="content\images\gallery.jpg" />
+    <Content Include="content\images\header.gif" />
+    <Content Include="content\images\home.jpg" />
+    <Content Include="content\images\icon-add.gif" />
+    <Content Include="content\images\icon-delete.gif" />
+    <Content Include="content\images\icon-edit.gif" />
+    <Content Include="content\images\icon-success.gif" />
+    <Content Include="content\images\menu.gif" />
+    <Content Include="content\images\menutop.gif" />
+    <Content Include="content\images\save.gif" />
+    <Content Include="content\images\settingsbg.gif" />
+    <Content Include="content\images\submenu.gif" />
+    <Content Include="content\images\success.gif" />
+    <Content Include="content\images\warning.gif" />
+    <Content Include="content\jquery-grid\ellipsis-xbl.xml" />
+    <Content Include="content\jquery-grid\ui.jqgrid.css" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-bg_diagonal-maze_20_6e4f1c_10x10.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-bg_diagonal-maze_40_000000_10x10.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-bg_fine-grain_10_eceadf_60x60.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-bg_fine-grain_10_f8f7f6_60x60.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-bg_fine-grain_15_eceadf_60x60.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-bg_fine-grain_15_f7f3de_60x60.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-bg_fine-grain_15_ffffff_60x60.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-bg_fine-grain_65_654b24_60x60.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-bg_fine-grain_68_b83400_60x60.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-icons_222222_256x240.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-icons_3572ac_256x240.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-icons_8c291d_256x240.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-icons_b83400_256x240.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-icons_fbdb93_256x240.png" />
+    <Content Include="content\jqueryui\pepper-grinder\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="content\jqueryui\pepper-grinder\jquery-ui-1.7.2.custom.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="scripts\additional-methods.js" />
+    <Content Include="scripts\email-protector.js" />
+    <Content Include="Areas\Admin\Views\Accounts\List.aspx" />
+    <Content Include="Areas\Admin\Views\CmsPage\Edit.aspx" />
+    <Content Include="Areas\Admin\Views\Menu\Edit.aspx" />
+    <Content Include="Areas\Admin\Views\MenuItem\Edit.aspx" />
+    <Content Include="Areas\Admin\Views\CmsPage\List.aspx" />
+    <Content Include="Areas\Admin\Views\Menu\List.aspx" />
+    <Content Include="skins\sitegroundj15118\sitegroundj15118.Master" />
+    <Content Include="skins\sitegroundj15118\views\Web.config" />
+    <Content Include="skins\sitegroundj1517\sitegroundj1517.Master" />
+    <Content Include="skins\sitegroundj1517\views\Web.config" />
+    <Content Include="skins\siteground-j15-183\views\Web.config" />
+    <Content Include="skins\siteground-j15-183\views\Home\Index.cshtml" />
+    <Content Include="skins\siteground-j15-183\views\siteground-j15-183.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="skins\siteground-j15-183\views\navigation\TopMenu.cshtml" />
+    <Content Include="skins\siteground-j15-183\views\navigation\LeftMenu.cshtml" />
+    <Content Include="skins\siteground-j15-183\views\Home\LastPages.cshtml" />
+    <Content Include="skins\simple-white\views\simple-white.cshtml" />
+    <Content Include="skins\simple-white\views\Web.config" />
+    <Content Include="skins\simple-white\views\home\Index.cshtml" />
+    <Content Include="skins\simple-white\views\navigation\SideMenu.cshtml" />
+    <Content Include="skins\simple-white\views\navigation\TopMenu.cshtml" />
+    <Content Include="skins\simple-white\views\home\LastPages.cshtml" />
+    <Content Include="skins\simple-white\views\home\StartPage.cshtml" />
+    <Content Include="Views\Widgets\TagCloud.cshtml" />
+    <Content Include="skins\simple-white\views\home\Tag.cshtml" />
+    <Content Include="skins\siteground-j15-183\views\Home\StartPage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resources.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resources.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resources.ru.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resources.ru.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Admin\Views\Dashboard\Index.aspx" />
+    <Content Include="Areas\Admin\Views\Shared\NavigationMenu.ascx" />
+    <Content Include="Areas\Admin\Views\Shared\PhotoGalleryGadget.ascx" />
+    <Content Include="Areas\Admin\Views\Shared\QuickInfo.ascx" />
+    <Content Include="Areas\Admin\Views\Shared\QuickMenu.ascx" />
+    <Content Include="content\images\lightbox-blank.gif" />
+    <Content Include="content\images\lightbox-btn-close.gif" />
+    <Content Include="content\images\lightbox-btn-next.gif" />
+    <Content Include="content\images\lightbox-btn-prev.gif" />
+    <Content Include="content\images\lightbox-ico-loading.gif" />
+    <Content Include="content\images\liquid-admin\login\error_bg.gif" />
+    <Content Include="content\images\liquid-admin\login\error_ico.gif" />
+    <Content Include="content\images\liquid-admin\login\form_bg.gif" />
+    <Content Include="content\images\liquid-admin\login\input_bg.png" />
+    <Content Include="content\images\liquid-admin\login\lk_left.gif" />
+    <Content Include="content\images\liquid-admin\login\lk_middle.gif" />
+    <Content Include="content\images\liquid-admin\login\lk_right.gif" />
+    <Content Include="content\images\liquid-admin\login\login_wrapper_bg.gif" />
+    <Content Include="content\images\liquid-admin\login\logo.png" />
+    <Content Include="content\images\liquid-admin\login\submit_left.gif" />
+    <Content Include="content\images\liquid-admin\login\submit_middle.gif" />
+    <Content Include="content\images\liquid-admin\login\submit_right.gif" />
+    <Content Include="content\images\liquid-admin\site\calendar_bottom.png" />
+    <Content Include="content\images\liquid-admin\site\calendar_middle.png" />
+    <Content Include="content\images\liquid-admin\site\calendar_next.gif" />
+    <Content Include="content\images\liquid-admin\site\calendar_prev.gif" />
+    <Content Include="content\images\liquid-admin\site\calendar_top.png" />
+    <Content Include="content\images\liquid-admin\site\content_bottom.gif" />
+    <Content Include="content\images\liquid-admin\site\content_top.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d1.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d10.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d11.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d12.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d2.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d3.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d4.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d5.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d6.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d7.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d8.gif" />
+    <Content Include="content\images\liquid-admin\site\dasboard_icons\d9.gif" />
+    <Content Include="content\images\liquid-admin\site\dashboard_li.gif" />
+    <Content Include="content\images\liquid-admin\site\drop.gif" />
+    <Content Include="content\images\liquid-admin\site\footer_li_bg.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\blue_ico.png" />
+    <Content Include="content\images\liquid-admin\site\forms\blue_message.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\cancel_left.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\cancel_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\cancel_right.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\green_ico.png" />
+    <Content Include="content\images\liquid-admin\site\forms\green_message.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\grey_left.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\grey_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\grey_right.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\input_text2.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\light_blue_left.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\light_blue_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\light_blue_right.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\negative.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\orange_left.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\orange_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\orange_right.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\positive.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\red_ico.png" />
+    <Content Include="content\images\liquid-admin\site\forms\red_left.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\red_message.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\red_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\red_right.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\send_form_left.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\send_form_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\send_form_right.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\white_ico.png" />
+    <Content Include="content\images\liquid-admin\site\forms\white_message.gif" />
+    <Content Include="content\images\liquid-admin\site\forms\yellow_ico.png" />
+    <Content Include="content\images\liquid-admin\site\forms\yellow_message.gif" />
+    <Content Include="content\images\liquid-admin\site\gallery_ul.gif" />
+    <Content Include="content\images\liquid-admin\site\gall_bottom.gif" />
+    <Content Include="content\images\liquid-admin\site\gall_left.gif" />
+    <Content Include="content\images\liquid-admin\site\gall_right.gif" />
+    <Content Include="content\images\liquid-admin\site\gall_top.gif" />
+    <Content Include="content\images\liquid-admin\site\go.gif" />
+    <Content Include="content\images\liquid-admin\site\head_bg.gif" />
+    <Content Include="content\images\liquid-admin\site\left_tab.gif" />
+    <Content Include="content\images\liquid-admin\site\left_tab.png" />
+    <Content Include="content\images\liquid-admin\site\list.gif" />
+    <Content Include="content\images\liquid-admin\site\logo.gif" />
+    <Content Include="content\images\liquid-admin\site\logo.png" />
+    <Content Include="content\images\liquid-admin\site\logo_bg.gif" />
+    <Content Include="content\images\liquid-admin\site\main_menu_bg.gif" />
+    <Content Include="content\images\liquid-admin\site\main_menu_li.gif" />
+    <Content Include="content\images\liquid-admin\site\menus_wrapper_bg.gif" />
+    <Content Include="content\images\liquid-admin\site\middle_tab.gif" />
+    <Content Include="content\images\liquid-admin\site\middle_tab.png" />
+    <Content Include="content\images\liquid-admin\site\mm_lk_left.gif" />
+    <Content Include="content\images\liquid-admin\site\mm_lk_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\mm_lk_right.gif" />
+    <Content Include="content\images\liquid-admin\site\more_left.gif" />
+    <Content Include="content\images\liquid-admin\site\more_right.gif" />
+    <Content Include="content\images\liquid-admin\site\new_messages.gif" />
+    <Content Include="content\images\liquid-admin\site\next.gif" />
+    <Content Include="content\images\liquid-admin\site\order.gif" />
+    <Content Include="content\images\liquid-admin\site\plus.gif" />
+    <Content Include="content\images\liquid-admin\site\quick_info_bottom.png" />
+    <Content Include="content\images\liquid-admin\site\quick_info_top.png" />
+    <Content Include="content\images\liquid-admin\site\right_tab.gif" />
+    <Content Include="content\images\liquid-admin\site\right_tab.png" />
+    <Content Include="content\images\liquid-admin\site\scb.png" />
+    <Content Include="content\images\liquid-admin\site\scb2.png" />
+    <Content Include="content\images\liquid-admin\site\scb_left.png" />
+    <Content Include="content\images\liquid-admin\site\scb_left2.png" />
+    <Content Include="content\images\liquid-admin\site\scb_right.png" />
+    <Content Include="content\images\liquid-admin\site\scb_right2.png" />
+    <Content Include="content\images\liquid-admin\site\sct_left.gif" />
+    <Content Include="content\images\liquid-admin\site\sct_left2.gif" />
+    <Content Include="content\images\liquid-admin\site\sct_left_right.gif" />
+    <Content Include="content\images\liquid-admin\site\sct_left_right2.gif" />
+    <Content Include="content\images\liquid-admin\site\sct_right.gif" />
+    <Content Include="content\images\liquid-admin\site\sct_right2.gif" />
+    <Content Include="content\images\liquid-admin\site\search_bg.gif" />
+    <Content Include="content\images\liquid-admin\site\search_form.gif" />
+    <Content Include="content\images\liquid-admin\site\search_label.gif" />
+    <Content Include="content\images\liquid-admin\site\search_wrapper_li.gif" />
+    <Content Include="content\images\liquid-admin\site\section_content_footer.png" />
+    <Content Include="content\images\liquid-admin\site\section_content_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\sec_menu_bg.gif" />
+    <Content Include="content\images\liquid-admin\site\sidebar_lk_bg.gif" />
+    <Content Include="content\images\liquid-admin\site\sidebar_menu_bg.gif" />
+    <Content Include="content\images\liquid-admin\site\sm_lk1.gif" />
+    <Content Include="content\images\liquid-admin\site\sm_lk2.gif" />
+    <Content Include="content\images\liquid-admin\site\sm_lk3.gif" />
+    <Content Include="content\images\liquid-admin\site\sm_lk4.gif" />
+    <Content Include="content\images\liquid-admin\site\sm_lk5.gif" />
+    <Content Include="content\images\liquid-admin\site\sm_lk6.gif" />
+    <Content Include="content\images\liquid-admin\site\sm_lk7.gif" />
+    <Content Include="content\images\liquid-admin\site\sm_lk8.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\action1.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\action2.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\action3.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\action4.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\add_new_left.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\add_new_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\add_new_right.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\approved.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\approve_left.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\approve_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\approve_right.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\asc.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\check_all_left.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\check_all_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\check_all_right.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\current_page_left.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\current_page_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\current_page_right.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\desc.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\edit_action.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\move1.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\move2.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\move3.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\move4.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\pending.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\td_bg1.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\td_bg2.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\uncheck_all_left.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\uncheck_all_middle.gif" />
+    <Content Include="content\images\liquid-admin\site\tables\uncheck_all_right.gif" />
+    <Content Include="content\images\liquid-admin\site\title_wrapper_left.png" />
+    <Content Include="content\images\liquid-admin\site\title_wrapper_left2.png" />
+    <Content Include="content\images\liquid-admin\site\title_wrapper_middle.png" />
+    <Content Include="content\images\liquid-admin\site\title_wrapper_right.png" />
+    <Content Include="content\images\liquid-admin\site\title_wrapper_right2.png" />
+    <Content Include="content\images\liquid-admin\site\todo_lk.gif" />
+    <Content Include="content\images\liquid-admin\site\user_access.gif" />
+    <Content Include="content\images\liquid-admin\site\user_access_li.gif" />
+    <Content Include="content\images\liquid-admin\site\user_details_bg.gif" />
+    <Content Include="content\lightbox\jquery.lightbox-0.5.css" />
+    <Content Include="content\liquid-admin\admin-ie.css" />
+    <Content Include="content\liquid-admin\admin-login-ie.css" />
+    <Content Include="content\liquid-admin\admin-login.css" />
+    <Content Include="content\liquid-admin\admin.css" />
+    <Content Include="content\liquid-admin\csshover.htc" />
+    <Content Include="content\liquid-admin\dashboard.css" />
+    <Content Include="content\liquid-admin\forms.css" />
+    <Content Include="content\liquid-admin\general.css" />
+    <Content Include="content\liquid-admin\iepngfix.htc" />
+    <Content Include="content\liquid-admin\pagination.css" />
+    <Content Include="content\liquid-admin\tables.css" />
+    <Content Include="scripts\liquid.admin.menu.js" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="uploads\dummy.txt" />
+    <Content Include="Areas\Admin\Views\Settings\Edit.aspx" />
+    <Content Include="Areas\Admin\Views\Settings\List.aspx" />
+    <Content Include="Areas\Admin\Views\Accounts\Edit.aspx" />
+    <Content Include="Areas\Admin\Views\FileUpload\List.aspx" />
+    <Content Include="Views\Shared\Links.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>25689</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://atomiccms.local</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

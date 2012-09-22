@@ -1,0 +1,13 @@
+﻿@model AtomicCms.Common.Entities.CmsMenu
+@using AtomicCms.Web.Core.Extensions
+@using AtomicCms.Common.Entities
+<nav id="menu">
+    <ul class="menu menu-dropdown">
+                @foreach (CmsMenuItem item in Model.MenuItems)
+                {
+            <li class="level1"><a class="level1" href="@Url.BuildMenuLink(item)" title="@item.Title" class="mainlevel-nav">
+                <span>@item.Title</span></a> </li>
+         
+                }
+    </ul>
+</nav>

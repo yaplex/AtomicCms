@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+    <class name="AtomicCms.Common.Poco.Status, AtomicCms.Common" table="ac_Statuses" lazy="false" discriminator-value="-1" >
+        <id name="Id" column="StatusId" type="int" unsaved-value="0">
+            <generator class="assigned">
+            </generator>
+        </id>
+        <discriminator column="StatusId" type="int"></discriminator>
+        <property name="StatusName" column="StatusName" type="System.String"/>
+        <property name="Description" column="Description" type="System.String"/>
+        <subclass name="AtomicCms.Common.Poco.DraftStatus, AtomicCms.Common" discriminator-value="1"></subclass>
+        <subclass name="AtomicCms.Common.Poco.PublishedStatus, AtomicCms.Common" discriminator-value="2"></subclass>
+        <subclass name="AtomicCms.Common.Poco.DroppedStatus, AtomicCms.Common" discriminator-value="3"></subclass>
+        
+    </class>
+</hibernate-mapping>
+

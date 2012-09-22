@@ -1,0 +1,21 @@
+﻿<p>
+    Welcome to my public website!</p>
+@model AtomicCms.Common.Entities.CmsPage
+@using AtomicCms.Web.Core.Extensions.MvcHelpers;
+@section PageTitle
+{
+    <h1 class="page-title">
+        @Html.PageTitle(Model)
+    </h1>
+}
+@section MainContent
+{
+    @Html.Raw((Model).PageContent)
+    <div class="modifydate">
+        Last Updated on
+        @Model.ModifiedAt.ToLongDateString()
+    </div>
+    <div>
+        @Html.Raw(Html.FacebookLikeButton(Url.PageUrl(Model)))
+    </div>
+}

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="AtomicCms.Common.Entities.CmsSetting, AtomicCms.Common" table="ac_SiteSettings" lazy="false">
+    <id name="Id" column="Id" type="int" unsaved-value="0">
+      <generator class="native">
+      </generator>
+    </id>
+    <property name="Key" column="Name" type="String"/>
+    <property name="Value" column="Value" type="String"/>
+  </class>
+</hibernate-mapping>
+

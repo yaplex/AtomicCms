@@ -1,0 +1,219 @@
+/* start tables */
+#product_list_tabs {
+	margin: 0;
+	padding: 0 0 0 3px;
+	float: left;
+}
+
+#product_list_tabs li {
+	float: left;
+	list-style: none;
+	padding:  0 2px 0 0;
+}
+
+#product_list_tabs a:link, #product_list_tabs a:visited,  #product_list_tabs a:active {
+	font-size: 13px;
+	line-height: 26px;
+	display: block;
+	font-weight: bold;
+	float: left;
+	background:url(../images/liquid-admin/site/tables/small_tabs_middle.gif) repeat-x;
+	color: #979797;
+	font-weight: bold;
+	
+}
+
+#product_list_tabs a:hover, #product_list_tabs a.selected:link, #product_list_tabs a.selected:visited, #product_list_tabs a.selected:active {
+	color: #000;
+	text-decoration: none;
+	background-position: 0 -26px;
+}
+
+#product_list_tabs a span {
+	display: block;
+	background:url(../images/liquid-admin/site/tables/small_tabs_left.gif) no-repeat;
+}
+
+#product_list_tabs a.selected:link span, #product_list_tabs a.selected:visited span, #product_list_tabs a.selected:active span, #product_list_tabs a:hover span  {
+	background-position: 0 -26px;
+}
+
+#product_list_tabs a span span {
+	display: block;
+	background:url(../images/liquid-admin/site/tables/small_tabs_right.gif) no-repeat right top;
+	padding: 0 14px;
+}
+
+#product_list_tabs a.selected:link span span, #product_list_tabs a.selected:visited span span, #product_list_tabs a.selected:active span span, #product_list_tabs a:hover span span {
+	background-position: right -26px !important;
+}
+
+#product_list_menu {
+	float: right;
+	padding: 15px 0 0;
+	
+}
+
+.update:link, .update:visited, .update:active {
+	display: inline;
+	float: left;
+	line-height: 26px;
+	font-size: 13px;
+	font-weight: bold;
+	margin-right: 5px;
+	color: #79a2cb;
+	background:url(../images/liquid-admin/site/tables/update_middle.gif) repeat-x;
+	
+}
+
+.update:hover {
+	text-decoration: underline;
+}
+
+.update span {
+	background:url(../images/liquid-admin/site/tables/update_left.gif) no-repeat;
+	display: block;
+
+}
+
+.update span span {
+	background:url(../images/liquid-admin/site/tables/update_right.gif) no-repeat right top;
+	padding: 0 10px;
+	
+
+}
+
+.update em {
+	display: block;
+	background:url(../images/liquid-admin/site/tables/add.gif) no-repeat left center;
+	font-style: normal;
+	padding: 0 0 0 19px;
+	position: relative;
+	top: 0;
+	
+}
+
+.table_wrapper td.photo, .table_wrapper th.photo {
+	padding: 0;
+	width: 75px;
+}
+
+.table_wrapper th.photo  span {
+	display: block;
+	padding: 0 0 0 12px;
+}
+
+
+.product_thumb {
+	display: block;
+	width: 75px;
+	height: 43px;
+	margin: 3px;
+	
+}
+
+.product_thumb img {
+	border: 1px solid #a3a3a3;
+	display: block;
+}
+
+.product_name:link, .product_name:visited, .product_name:hover, .product_name:active  {
+	
+	color: #406f85;
+	line-height: normal;
+	font-weight: bold;
+	font-size: 12px;
+	display: block;
+	display: inline-block;
+}
+
+.move_menu a:link, .move_menu a:visited, .move_menu a:hover, .move_menu a:active {
+	display: block;
+	width: 13px;
+	height: 13px;
+	text-indent: -3000px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.move1 {
+	background-image:url(../images/liquid-admin/site/tables/move1.gif);
+}
+
+.move2 {
+	background-image:url(../images/liquid-admin/site/tables/move2.gif);
+}
+
+.move3 {
+	background-image:url(../images/liquid-admin/site/tables/move3.gif);
+}
+
+.move4 {
+	background-image:url(../images/liquid-admin/site/tables/move4.gif);
+}
+
+
+.move_menu {
+	width: 64px;
+	overflow: hidden;
+}
+
+.move_menu ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 200%;
+}
+
+.move_menu li {
+	float: left;
+	margin: 0;
+	padding: 0 2px 0 0;
+	list-style: none;
+}
+
+
+.actions_menu a:link, .actions_menu a:visited, .actions_menu a:hover, .actions_menu a:active {
+	display: block;
+	padding: 0 0 0 18px;
+	font-weight: bold;
+	font-size: 11px;
+	color: #406f85;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.actions_menu {
+	overflow: hidden;
+	width: 170px;
+}
+
+.actions_menu ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 200px;
+}
+
+
+.actions_menu li {
+	margin: 0;
+	padding: 0 10px 0 0;
+	list-style: none;
+	float: left;
+}
+
+.details {
+	background-image:url(../images/liquid-admin/site/tables/action1.gif);
+}
+
+.edit {
+	background-image:url(../images/liquid-admin/site/tables/edit_action.gif);
+}
+
+.delete {
+	background-image:url(../images/liquid-admin/site/tables/action4.gif);
+}
+
+/* end tables */
+

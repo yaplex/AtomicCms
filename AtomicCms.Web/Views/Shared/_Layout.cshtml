@@ -1,0 +1,54 @@
+﻿@using AtomicCms.Common.Constants
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@RenderSection("TitleContent", false) </title>
+    <link rel="alternate" type="application/atom+xml" title="@Html.Action("FreeHtml", "Tools", new { htmlKey = Constant.Settings.SiteLogo }) - Atom" href="/atom/" />
+    <link rel="alternate" type="application/rss+xml" title="@Html.Action("FreeHtml", "Tools", new { htmlKey = Constant.Settings.SiteLogo }) - Rss" href="/rss/" />
+
+    <link href="/scripts/syntaxhighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <link href="/scripts/syntaxhighlighter/styles/shCoreDefault.css" rel="stylesheet" type="text/css" />
+    <link href="/scripts/syntaxhighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <script src="/scripts/syntaxhighlighter/scripts/shCore.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shAutoloader.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shLegacy.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushXml.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushSql.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushScala.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushSass.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushRuby.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushPython.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushPlain.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushPhp.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushPerl.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushJava.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushGroovy.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushErlang.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushDiff.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushDelphi.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushCss.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushCpp.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushColdFusion.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushBash.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushAS3.js" type="text/javascript"></script>
+    <script src="/scripts/syntaxhighlighter/scripts/shBrushAppleScript.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+
+
+    @RenderSection("HeadContent")
+    @Html.Action("FreeHtml", "Tools", new { htmlKey = "google-analytics" })
+</head>
+<body>
+    @RenderBody()
+    <div style="text-align: center;font-size:0.7em">
+        @Html.Partial("Links")
+    </div>
+</body>
+</html>

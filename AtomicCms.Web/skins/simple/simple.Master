@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/BaseSkinMaster.Master" AutoEventWireup="true"
+    Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="AtomicCms.Common.Constants" %>
+<%@ Import Namespace="AtomicCms.Common.Entities" %>
+<asp:Content ContentPlaceHolderID="TitleContent" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="TitleContent">
+        <%=((CmsPage) Model).SeoTitle%>
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="HeadContent" runat="server">
+    <link rel="stylesheet" href='<%=Url.Content("~/skins/simple/styles/style.css")%>'
+        type="text/css" />
+    <!--[if lte IE 6]> <link rel="stylesheet" href='<%=Url.Content("~/skins/simple/styles/ie6.css")%>' type="text/css" /> <![endif]-->
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent">
+        <meta name="keywords" content="<%=((CmsPage) Model).MetaKeywords%>" />
+        <meta name="description" content="<%=((CmsPage) Model).MetaDescription%>" />
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content" ContentPlaceHolderID="BodyContent" runat="server">
+    <div id="under">
+        <div id="wrapper">
+            <div id="wrapper1">
+                <div id="holder">
+                    <div id="top">
+                        <div id="logo">
+                            <a href="/"><span>
+                                <div class="siteLogo">
+                                    <%
+                                        Html.RenderAction("FreeHtml", "Tools",
+                                                          new {htmlKey = Constant.Settings.SiteLogo});%>
+                                </div>
+                                <span class="siteSubLogo">
+                                    <h2 class="siteSubLogo">
+                                        <%
+                                        Html.RenderAction("FreeHtml", "Tools",
+                                                          new {htmlKey = Constant.Settings.SiteSubLogo});%></h2>
+                                </span></span></a>
+                        </div>
+                        <div id="search">
+                            <%Html.RenderAction("FreeHtml", "Tools", new { htmlKey = "site-search" }); %>
+                        </div>
+                        <div class="clr">
+                        </div>
+                    </div>
+                    <div class="pathway">
+                        <table cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <span class="breadcrumbs pathway">
+                                            <%
+                                        Html.RenderAction("Show", "Navigation", new {menuName = "TopMenu"});%>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="news">
+                        <%
+                                        Html.RenderAction("FreeHtml", "Tools", new {htmlKey = "ad-banner-top"});%>
+                        <%
+                                        Html.RenderAction("FreeHtml", "Tools", new {htmlKey = "ad-slot-news"});%>
+                        <div class="clr">
+                        </div>
+                    </div>
+                    <div id="content">
+                        <div id="leftcolumn">
+                            <%
+                                        Html.RenderAction("Show", "Navigation", new {menuName = "LeftMenu"});%>
+                            <%
+                                        Html.RenderAction("LastPages", "Home");%>
+                            <%
+                                        Html.RenderAction("TagCloud", "Widgets");%>
+                        </div>
+                        <div id="main_full">
+                            <div class="nopad">
+                                <div class="componentheading">
+									<asp:ContentPlaceHolder ID="PageTitle" runat="server">
+									</asp:ContentPlaceHolder>
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                                <table cellspacing="0" cellpadding="0" class="blog">
+                                    <tbody>
+                                        <tr>
+                                            <td valign="top">
+                                                <div>
+                                                    <table class="contentpaneopen">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td valign="top" colspan="2">
+                                                                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                                                    </asp:ContentPlaceHolder>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <span class="article_separator">&nbsp;</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="clr">
+                        </div>
+                        <div class="clr">
+                        </div>
+                    </div>
+                    <div id="footer">
+                        <p class="copyright">
+                            <%
+                                        Html.RenderAction("FreeHtml", "Tools", new {htmlKey = "copyrights"});%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>

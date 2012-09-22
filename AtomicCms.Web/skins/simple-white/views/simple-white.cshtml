@@ -1,0 +1,53 @@
+﻿@using AtomicCms.Common.Constants
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section TitleContent
+{
+    @if (!IsSectionDefined("TitleContent"))
+    {
+        @Model.SeoTitle
+    }
+    else
+    {
+        @RenderSection("TitleContent")
+    }
+}
+@section HeadContent
+{
+    <link rel="stylesheet" href='@Url.Content("~/skins/simple-white/styles/style.css")'
+          type="text/css" />
+    @if (!IsSectionDefined("HeadContent"))
+    {
+        <meta name="keywords" content="@Model.MetaKeywords" />
+        <meta name="description" content="@Model.MetaDescription" />
+    }
+    else
+    {
+        @RenderSection("HeadContent")
+    }
+}
+<div class="page sidebar-a-right sidebar-b-left isblog " id="page">
+    <div class="wrapper grid-block">
+        <div style="float: right;">
+            @Html.Action("FreeHtml", "Tools", new { htmlKey = "facebook" })
+            @Html.Action("FreeHtml", "Tools", new { htmlKey = "twitter" })
+            @Html.Action("FreeHtml", "Tools", new { htmlKey = "rss" })
+        </div>
+        <div class="header" id="header">
+            <div class="grid-block" id="headerbar">
+               
+               @Html.Action("FreeHtml", "Tools", new { htmlKey = "logo" })
+
+                <div style="float: right; padding-top: 30px; font-size: 36px; line-height: 30px;
+                    font-weight: bold;">
+                    @Html.Action("FreeHtml", "Tools", new { htmlKey = Constant.Settings.SiteLogo })
+                </div>
+            </div>
+            <div class="grid-block" id="menubar">
+                @Html.Action("Show", "Navigation", new { menuName = "TopMenu" })
+            </div>
+        </div>
+        @RenderSection("PageContent")
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="AtomicCms.Common.Entities.CmsMenuItem, AtomicCms.Common" table="ac_MenuItems" lazy="false">
+    <id name="Id" column="Id" type="int" unsaved-value="0">
+      <generator class="native">
+      </generator>
+    </id>
+    <property name="Title" column="Title" type="String"/>
+    <property name="NavigateUrl" column="NavigateUrl" type="String"/>
+    <property name="MenuId" column="MenuId" type="int"/>
+    <property name="Visible" column="Visible" type="System.Boolean"/>
+    <many-to-one column="EntryId" name="Entry" class="AtomicCms.Common.Entities.CmsPage, AtomicCms.Common" not-found="ignore"/>
+  </class>
+</hibernate-mapping>
+

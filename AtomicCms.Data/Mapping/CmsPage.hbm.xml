@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="AtomicCms.Common.Entities.CmsPage, AtomicCms.Common" table="ac_Pages" lazy="false">
+    <id name="Id" column="Id" type="int" unsaved-value="0">
+      <generator class="native">
+      </generator>
+    </id>
+    <property name="CreatedAt" column="Created" type="System.DateTime"/>
+    <property name="SeoTitle" column="SeoTitle" type="String"/>
+    <property name="PageTitle" column="PageTitle" type="String"/>
+    <property name="PageContent" column="PageContent" type="String" length="2147483646"/>
+    <property name="Alias" column="Alias" type="String"/>
+    <many-to-one column="Author" name="Author" class="AtomicCms.Common.Entities.CmsUser, AtomicCms.Common"/>
+    <property name="ModifiedAt" column="LastModified" type="System.DateTime"/>
+    <property name="MetaKeywords" column="MetaKeywords" type="String"/>
+    <property name="MetaDescription" column="MetaDescription" type="String"/>
+    <bag name="Tags" table="ac_PageTags" lazy="false" cascade="save-update" >
+      <key column="PageId"></key>
+      <many-to-many class="AtomicCms.Common.Entities.CmsTag, AtomicCms.Common" column="TagId" ></many-to-many>
+    </bag>
+      <many-to-one column="PageStatus" name="Status" class="AtomicCms.Common.Poco.Status, AtomicCms.Common"/>
+  </class>
+    <sql-query name="GetPagesWithTag">
+        <return class="AtomicCms.Common.Entities.CmsPage, AtomicCms.Common"/>
+        SELECT * FROM ac_pages p
+        JOIN dbo.ac_PageTags pt ON p.Id = pt.PageId
+        JOIN dbo.ac_Tags t ON t.TagId = pt.TagId
+        WHERE t.TagName = :tag and p.PageStatus = 2
+    </sql-query>
+</hibernate-mapping>
+

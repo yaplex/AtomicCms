@@ -1,0 +1,18 @@
+﻿div.validation-summary-errors
+{
+    padding: 5px;
+    margin:5px;
+    background-color: #fffafa;
+    border: solid 1px #ff3333;
+    color: #ff3333;
+}
+
+div.validation-summary-errors ul
+{
+    margin: 0;
+    padding: 15px 20px;
+}
+div.validation-summary-errors span
+{
+    font-weight: bold;
+}

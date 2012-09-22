@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using AtomicCms.Common.Constants
+@using AtomicCms.Common.Entities
+@section TitleContent
+{
+    @Model.SeoTitle
+}
+@section HeadContent
+{
+    <link rel="stylesheet" href='@Url.Content("~/skins/siteground-j15-183/styles/style.css")'
+        type="text/css" />
+    <meta name="keywords" content="@Model.MetaKeywords" />
+    <meta name="description" content="@Model.MetaDescription" />
+}
+<div id="page_bg">
+    <div id="header">
+        @Html.Action("Show", "Navigation", new { menuName = "TopMenu" })
+        <div class="clr">
+        </div>
+        <div class="logo">
+            <h2>
+                <a href="/">
+                    @Html.Action("FreeHtml", "Tools", new { htmlKey = Constant.Settings.SiteLogo })</a></h2>
+        </div>
+        <div class="clr">
+        </div>
+    </div>
+    <div id="content">
+        <div id="leftcolumn">
+            @Html.Action("Show", "Navigation", new { menuName = "LeftMenu" })
+            <br />
+            @Html.Action("LastPages", "Home")
+        </div>
+        <div id="maincolumn_full">
+            <div class="nopad">
+                <div class="componentheading">
+                    @RenderSection("PageTitle")
+                </div>
+                <div class="blog">
+                    <div>
+                        <div class="contentpaneopen">
+                            @RenderSection("MainContent")
+                        </div>
+                        <span class="article_separator">&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clr">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+﻿@using AtomicCms.Common.Constants
+@using AtomicCms.Web.Core.Extensions.MvcHelpers
+@using AtomicCms.Common.Entities
+@model CmsPage
+@section PageContent
+{
+    <div class="grid-block" id="main">
+        @*<aside class="grid-box" id="sidebar-b" style="min-height: 206px; width:200px"><div>fasdfasdfsfas dfasdf asdfasdf asdfasdf asdf sadf sadf saf safd sa</div><div class="sidebar-bg"></div></aside>*@
+        <div class="grid-box" id="maininner">
+            <section class="grid-block" id="content">
+                <div id="system">
+                
+                @Html.Action("FreeHtml", "Tools", new { htmlKey = "befor-article" })
+
+                    <article class="item">
+                        <header>
+                            <h1 class="title">
+                                @Html.PageTitle(Model)
+                            </h1>
+                        </header>
+
+                        <div class="add-this" style="margin-bottom: 10px;">
+                            @Html.Action("FreeHtml", "Tools", new{htmlKey = "add-this"})
+                        </div>
+
+                        <div class="content clearfix">
+                            @Html.Raw((Model).PageContent)
+                        </div>
+                    </article>
+                    
+                    @Html.Action("FreeHtml", "Tools", new { htmlKey = "after-article" })
+
+                </div></section>
+        </div>
+        <!-- maininner end -->
+        <div class="grid-box aside" id="sidebar-a" style="min-height: 500px;">
+            <div class="grid-box width100 grid-v">
+                <div class="module mod-line deepest">
+                    @Html.Action("Show", "Navigation", new {menuName = "SideMenu"})
+                </div>
+            </div>
+            <div class="grid-box width100 grid-v">
+                <div class="module mod-line deepest">
+                    @Html.Action("LastPages", "Home")
+                </div>
+            </div>
+            <div class="grid-box width100 grid-v">
+                <div class="module mod-line deepest">
+                    @Html.Action("TagCloud", "Widgets")
+                </div>
+            </div>
+            <div class="grid-box width100 grid-v">
+                <div class="module mod-line deepest">
+                </div>
+            </div>
+            <div class="sidebar-bg">
+            </div>
+        </div>
+    </div>
+}

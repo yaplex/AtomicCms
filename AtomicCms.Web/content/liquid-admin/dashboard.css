@@ -1,0 +1,265 @@
+/* start dashboard */
+
+.dashboard_menu_wrapper {
+	margin: -15px -15px 0 0;
+}
+
+.dashboard_menu {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 0px 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.dashboard_menu li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 103px;
+	height: 101px;
+	background:url(../images/liquid-admin/site/dashboard_li.gif) no-repeat 0 0;
+	float: left;
+	margin: 15px 15px 0 0;
+}
+
+.dashboard_menu li:hover {
+	background-position: 0 -101px;
+}
+
+.dashboard_menu a:link,
+.dashboard_menu a:visited,
+.dashboard_menu a:active
+  {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 1px 3px;
+	color: #2e738c;
+	
+}
+
+.dashboard_menu a:hover {
+	color: #0590c2;
+}
+
+.dashboard_menu a.dashboard_link {
+	display: block;
+	padding: 67px 0px 0;
+	font-size: 11px;
+	text-align: center;
+}
+
+.d1 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d1.gif);
+}
+.d2 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d2.gif);
+}
+.d3 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d3.gif);
+}
+.d4 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d4.gif);
+}
+.d5 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d5.gif);
+}
+.d6 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d6.gif);
+}
+.d7 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d7.gif);
+}
+.d8 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d8.gif);
+}
+.d9 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d9.gif);
+}
+.d10 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d10.gif);
+}
+.d11 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d11.gif);
+}
+.d12 {
+	background-image:url(../images/liquid-admin/site/dasboard_icons/d12.gif);
+}
+
+
+.table_wrapper {
+	width: 100%;
+	margin: 0 auto;
+	font-size: 11px;
+	
+}
+
+.table_wrapper_inner {
+	
+}
+
+.table_wrapper td, .table_wrapper th {
+	border: solid #d3e5ed;
+	border-width: 0 1px 1px 0;
+}
+
+.table_wrapper th {
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.table_wrapper th a:link, .table_wrapper th a:visited, .table_wrapper th a:hover, .table_wrapper th a:active {
+	color: #1f476f;
+	display: block;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding: 0 16px 0 0;
+}
+
+.approved {
+	display: block;
+	display: inline-block;
+	padding: 0 20px 0 0;
+	background:url(../images/liquid-admin/site/tables/approved.gif) no-repeat right center;
+}
+
+.pending {
+	display: block;
+	display: inline-block;
+	padding: 0 20px 0 0;
+	background:url(../images/liquid-admin/site/tables/pending.gif) no-repeat right center;
+	color: #b86464;
+}
+
+.asc {
+	background-image:url(../images/liquid-admin/site/tables/asc.gif);
+}
+
+.desc {
+	background-image:url(../images/liquid-admin/site/tables/desc.gif);
+}
+
+.table_wrapper td , .table_wrapper th {
+	text-align: left;
+	padding: 0 12px;
+	line-height: 26px;
+}
+
+.table_wrapper th {
+	
+}
+
+.table_wrapper td {
+	background: #fefefe url(../images/liquid-admin/site/tables/td_bg1.gif) repeat-x;
+}
+
+.table_wrapper tr.second td {
+	background: #f3f9fb url(../images/liquid-admin/site/tables/td_bg2.gif) repeat-x;
+}
+
+.actions {
+	width: 126px;
+	overflow: hidden;
+}
+
+.actions .radio {
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	float: left;
+	
+}
+
+.actions ul {
+	margin: 0;
+	padding: 0;
+	width: 150px;
+}
+
+
+.actions ul li {
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0 11px 0 0;
+	list-style: none;
+	
+}
+
+.actions ul a:link, .actions ul a:visited, .actions ul a:hover, .actions ul a:active {
+	display: block;
+	width: 14px;
+	height: 13px;
+	text-indent: -3000px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.action1 {
+	background-image:url(../images/liquid-admin/site/tables/action1.gif);
+}
+.action2 {
+	background-image:url(../images/liquid-admin/site/tables/action2.gif);
+}
+.action3 {
+	background-image:url(../images/liquid-admin/site/tables/action3.gif);
+}
+.action4 {
+	background-image:url(../images/liquid-admin/site/tables/action4.gif);
+}
+
+
+.table_section .sct_left .sct_left .sct_right {
+	padding: 0 2px;
+} 
+
+
+.table_section form, .table_section fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.table_menu {
+	width: 100%;
+	overflow: hidden;
+	padding: 5px 0 0;
+	margin: 0 0 -3px;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.table_menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.table_menu .left {
+	float: left;
+	padding: 0 0 0 11px;
+}
+
+.table_menu .right {
+	float: right;
+	padding: 0 7px 0 0;
+}
+
+.table_menu li {
+	float: left;
+	margin: 0;
+	padding: 0 6px 0 0;
+	list-style: none;
+}
+
+
+
+/* end dashboard */

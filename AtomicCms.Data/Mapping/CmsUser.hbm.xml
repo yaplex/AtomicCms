@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+    <class name="AtomicCms.Common.Entities.CmsUser, AtomicCms.Common" table="ac_Users" lazy="false">
+        <id name="Id" column="Id" type="int" unsaved-value="0">
+            <generator class="native">
+            </generator>
+        </id>
+        <property name="Login" column="Login" type="String"/>
+        <property name="Hash" column="Hash" type="String"/>
+        <property name="DisplayName" column="DisplayName" type="String"/>
+        <property name="Email" column="Email" type="String"/>
+        <property name="CreatedAt" column="Registered" type="System.DateTime"/>
+        <property name="Status" column="Status" type="int"/>
+        <property name="Role" column="Role" type="int"/>
+    </class>
+</hibernate-mapping>
+

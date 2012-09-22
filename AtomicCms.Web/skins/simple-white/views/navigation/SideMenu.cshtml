@@ -1,0 +1,11 @@
+﻿@model AtomicCms.Common.Entities.CmsMenu
+@using AtomicCms.Web.Core.Extensions
+@using AtomicCms.Common.Entities
+<h3 class="title">
+    @Model.Title</h3>
+<ul class="line">
+    @foreach (CmsMenuItem item in Model.MenuItems)
+    {
+        <li><a href="@Url.BuildMenuLink(item)" title="@item.Title">@item.Title</a></li>
+    }
+</ul>

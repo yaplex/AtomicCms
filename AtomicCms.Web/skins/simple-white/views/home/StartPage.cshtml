@@ -1,0 +1,88 @@
+﻿@using AtomicCms.Common.Constants
+@using AtomicCms.Common.Extensions
+@using AtomicCms.Web.Core.Extensions.MvcHelpers
+@using AtomicCms.Common.Entities
+@model CmsPage
+@section PageContent
+{
+    <div id="top-a">
+        <div class="grid-block section">
+            <div class="grid-box width100 grid-h" style="width: 980px;">
+                <div class="module mod-line deepest" style="min-height: 66px;">
+                    <div class="text-center">
+                        @Html.Action("FreeHtml", "Tools", new { htmlKey = "module-top-center" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-block" id="main">
+        <div class="grid-box" id="maininner" style="min-height: 249px; width: 490px; left: 245px;">
+            <div class="grid-block section" id="content">
+                <div id="system">
+                    <article class="item">
+				        @if (!string.IsNullOrEmpty(Model.PageTitle.NullSafe().Trim()))
+                        {
+                            <div class="header">
+			                    <h1 class="title">@Html.PageTitle(Model)</h1>
+		                    </div>
+                        }
+		                <div class="content clearfix">
+                            @Html.Raw((Model).PageContent)
+                        </div>
+
+<div class="add-this" style="margin-top: 10px;">
+    @Html.Action("FreeHtml", "Tools", new{htmlKey = "add-this"})
+</div>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+        <!-- maininner end -->
+        <div class="grid-box aside" id="sidebar-a" style="min-height: 460px; left: 245px;
+            width: 245px;">
+            <div class="grid-box width100 grid-v">
+                <div class="module mod-line deepest">
+                    @Html.Action("LastPages", "Home")
+                </div>
+            </div>
+            <div class="sidebar-bg">
+            </div>
+        </div>
+        <div class="grid-box aside" id="sidebar-b" style="min-height: 460px; left: -735px;
+            width: 245px;">
+            <div class="grid-box width100 grid-v">
+                <div class="module mod-line deepest">
+                    @Html.Action("FreeHtml", "Tools", new { htmlKey = "module-middle-left" })
+                </div>
+            </div>
+            <div class="sidebar-bg">
+            </div>
+        </div>
+    </div>
+    <div id="bottom-a">
+        <div class="grid-block section">
+            <div class="grid-box width25 grid-h" style="width: 245px;">
+                <div class="module mod-line deepest" style="min-height: 111px;">
+                    @Html.Action("FreeHtml", "Tools", new { htmlKey = "module-bottom-left-left" })
+                </div>
+            </div>
+            <div class="grid-box width25 grid-h" style="width: 245px;">
+                <div class="module mod-line deepest" style="min-height: 111px;">
+                    @Html.Action("FreeHtml", "Tools", new { htmlKey = "module-bottom-left-center" })
+                </div>
+            </div>
+            <div class="grid-box width25 grid-h" style="width: 245px;">
+                <div class="module mod-line deepest" style="min-height: 111px;">
+                    @Html.Action("FreeHtml", "Tools", new { htmlKey = "module-bottom-right-center" })
+                </div>
+            </div>
+            <div class="grid-box width25 grid-h" style="width: 245px;">
+                <div class="module mod-line deepest" style="min-height: 111px;">
+                    @Html.Action("FreeHtml", "Tools", new { htmlKey = "module-bottom-right-right" })
+                </div>
+            </div>
+        </div>
+    </div>
+}

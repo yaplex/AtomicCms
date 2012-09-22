@@ -1,0 +1,12 @@
+#top_menu{
+	margin:0 auto;
+	padding:0;
+	height:52px;
+}
+#news_flash .module div div div h3{
+	padding: 0;
+	margin: 0;
+}
+#voteid1, #voteid2, #voteid3, #voteid4, #voteid5, #voteid6, #voteid7, #voteid8, #voteid9, #voteid10{
+	border:none;
+}

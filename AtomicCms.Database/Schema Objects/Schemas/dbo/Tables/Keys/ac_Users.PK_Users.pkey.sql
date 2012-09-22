@@ -1,0 +1,5 @@
+﻿ALTER TABLE [dbo].[ac_Users] ADD  CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)
+

@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomicCms.Common", "AtomicCms.Common\AtomicCms.Common.csproj", "{CEC587BE-506A-4CEB-9FF7-B91A2067AD76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomicCms.Tests", "AtomicCms.Tests\AtomicCms.Tests.csproj", "{D1A76468-CCCC-402A-B0E6-8A37C0985F11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomicCms.Web", "AtomicCms.Web\AtomicCms.Web.csproj", "{BAEECCC0-B3EE-44AD-B546-999A58CCA23D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomicCms.Web.Core", "AtomicCms.Web.Core\AtomicCms.Web.Core.csproj", "{29379522-4A6F-498F-B1FA-1F495509E35C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomicCms.Services", "AtomicCms.Services\AtomicCms.Services.csproj", "{99ED473E-8262-40BF-9472-C9D9161B2159}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomicCms.Data", "AtomicCms.Data\AtomicCms.Data.csproj", "{DA9F9EFB-7E31-4FC1-8603-44CB7C3E52C2}"
+EndProject
+Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "AtomicCms.Database", "AtomicCms.Database\AtomicCms.Database.dbproj", "{67CBC824-A49E-4E9B-A947-360F3DFE65C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEC587BE-506A-4CEB-9FF7-B91A2067AD76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC587BE-506A-4CEB-9FF7-B91A2067AD76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC587BE-506A-4CEB-9FF7-B91A2067AD76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC587BE-506A-4CEB-9FF7-B91A2067AD76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A76468-CCCC-402A-B0E6-8A37C0985F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A76468-CCCC-402A-B0E6-8A37C0985F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A76468-CCCC-402A-B0E6-8A37C0985F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A76468-CCCC-402A-B0E6-8A37C0985F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAEECCC0-B3EE-44AD-B546-999A58CCA23D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAEECCC0-B3EE-44AD-B546-999A58CCA23D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAEECCC0-B3EE-44AD-B546-999A58CCA23D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAEECCC0-B3EE-44AD-B546-999A58CCA23D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29379522-4A6F-498F-B1FA-1F495509E35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29379522-4A6F-498F-B1FA-1F495509E35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29379522-4A6F-498F-B1FA-1F495509E35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29379522-4A6F-498F-B1FA-1F495509E35C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99ED473E-8262-40BF-9472-C9D9161B2159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99ED473E-8262-40BF-9472-C9D9161B2159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99ED473E-8262-40BF-9472-C9D9161B2159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99ED473E-8262-40BF-9472-C9D9161B2159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9F9EFB-7E31-4FC1-8603-44CB7C3E52C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9F9EFB-7E31-4FC1-8603-44CB7C3E52C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9F9EFB-7E31-4FC1-8603-44CB7C3E52C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9F9EFB-7E31-4FC1-8603-44CB7C3E52C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		BuildVersion_StartDate = 1975/10/21
+		BuildVersion_BuildVersioningStyle = None.None.None.None
+		BuildVersion_UpdateAssemblyVersion = False
+	EndGlobalSection
+EndGlobal
