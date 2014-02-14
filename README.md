@@ -14,13 +14,6 @@ Requirements
 * Visual Studio 2010
 
 
-Screenshots
-----------
 
-![Atomic CMS default admin page] (http://www.yaplex.com/wp-content/uploads/2012/09/atomic-cms-admin-panel-dashboard-thumb.png "Atomic CMS admin page")
-
-![Atomic CMS edit page] (http://www.yaplex.com/wp-content/uploads/2012/09/atomic-cms-admin-panel-edit-page-thumb.png "Atomic CMS Edit page section") 
-
-![Atomic CMS pages] (http://www.yaplex.com/wp-content/uploads/2012/09/atomic-cms-admin-panel-pages-list-thumb.png "Atomic CMS pages") 
 
 [software developer resume] (http://www.yaplex.com/developer-resume/)
