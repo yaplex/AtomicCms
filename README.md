@@ -13,11 +13,7 @@ Requirements
 * IIS7 URL Rewrite module 2.0
 * Visual Studio 2010
 
-Documentation
---
 
-[View Documentation](http://www.yaplex.com/products/atomic-cms/documentation-for-atomic-cms/)
- 
 Screenshots
 ----------
 
