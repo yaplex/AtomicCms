@@ -16,4 +16,4 @@ Requirements
 
 
 
-[software developer resume] (http://www.yaplex.com/developer-resume/)
+[software developer resume] (http://blog.yaplex.com/developer-resume/)
